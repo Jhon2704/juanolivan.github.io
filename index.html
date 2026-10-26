@@ -4,6 +4,16 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Juan Oliván · Computer Vision & AI Engineer</title>
+<meta name="description" content="Juan Oliván — Senior Computer Vision & AI Engineer. Auditable LLM multi-agent pipelines and deep-learning inspection in GxP-regulated pharma (21 CFR Part 11).">
+<meta name="theme-color" content="#09090b">
+<link rel="canonical" href="https://jhon2704.github.io/juanolivan.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Juan Oliván · Computer Vision & AI Engineer">
+<meta property="og:description" content="LLM multi-agent pipelines and industrial computer vision in GxP / 21 CFR Part 11 environments.">
+<meta property="og:url" content="https://jhon2704.github.io/juanolivan.github.io/">
+<meta property="og:image" content="https://jhon2704.github.io/juanolivan.github.io/mi_foto.png">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2309090b'/%3E%3Ctext x='16' y='22' font-size='15' font-family='monospace' text-anchor='middle' fill='%23c8f542'%3EJO%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -617,6 +627,44 @@
     .case-metrics, .case-grid, .whyme-grid { grid-template-columns: 1fr; }
   }
 
+
+/* HERO STATUS + BRIDGE STRIP */
+.hero-status {
+  display: inline-flex; align-items: center; gap: 10px; margin-bottom: 1.4rem;
+  font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.04em; color: var(--text2);
+  padding: 6px 14px; border: 1px solid var(--border2); border-radius: 100px; background: var(--bg2);
+}
+.status-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 8px var(--accent); flex-shrink: 0; }
+.bridge {
+  display: grid; grid-template-columns: 1fr auto 1fr auto 1fr; gap: 12px; align-items: stretch; margin-bottom: 4rem;
+  animation: fadeUp 0.7s 0.2s ease both;
+}
+.bridge-step {
+  background: var(--bg2); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 1.2rem 1.35rem; transition: border-color 0.2s, transform 0.2s;
+}
+.bridge-step:hover { border-color: rgba(200,245,66,0.35); transform: translateY(-2px); }
+.bridge-kicker { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent); margin-bottom: 8px; }
+.bridge-step h4 { font-size: 14px; font-weight: 500; color: var(--text); margin-bottom: 6px; }
+.bridge-step p { font-size: 12px; color: var(--text2); line-height: 1.65; }
+.bridge-arrow { display: flex; align-items: center; color: var(--text3); font-family: 'DM Mono', monospace; font-size: 18px; }
+@media (max-width: 700px) {
+  nav { flex-direction: column; align-items: flex-start; gap: 12px; padding-top: 1.2rem; padding-bottom: 1.2rem; margin-bottom: 2.5rem; }
+  .nav-links { gap: 1.1rem; row-gap: 0.4rem; }
+  .bridge { grid-template-columns: 1fr; }
+  .bridge-arrow { justify-content: center; transform: rotate(90deg); height: 18px; }
+}
+
+/* SKILL CHIPS */
+.skill-chips { display: flex; flex-wrap: wrap; gap: 7px; }
+.skill-chip {
+  font-family: 'DM Mono', monospace; font-size: 11px; padding: 5px 12px; border-radius: 6px;
+  background: var(--bg4); color: var(--text2); border: 1px solid var(--border); transition: border-color 0.2s, color 0.2s;
+}
+.skill-chip:hover { border-color: var(--accent); color: var(--accent); }
+.skill-chip.core { color: var(--text); border-color: var(--border2); }
+.edu-card.edu-wide { grid-column: 1 / -1; border-color: rgba(200,245,66,0.25); background: var(--accent3); }
+.edu-note { font-size: 12px; color: var(--text2); margin-top: 6px; line-height: 1.6; }
 </style>
 </head>
 <body>
@@ -636,70 +684,85 @@
       <li><a href="#education">Education</a></li>
       <li><a href="#experience">Experience</a></li>
       <li><a href="#contact">Contact</a></li>
+      <li><a href="https://github.com/Jhon2704" target="_blank" rel="noopener">GitHub ↗</a></li>
     </ul>
   </nav>
 
   <!-- HERO + PHOTO -->
   <div class="hero">
     <div class="hero-left">
-      <div class="hero-tag">Computer Vision Engineer · AI Systems · Technical Leadership</div>
-      <h1>Industrial AI systems<br>built for <em>production</em>,<br><em>validation</em> and scale.</h1>
+      <div class="hero-tag">Computer Vision · Multi-agent LLM systems · GxP</div>
+      <h1>AI that holds up<br>in <em>regulated</em><br><em>production</em>.</h1>
       <p class="hero-desc">
-        Senior Computer Vision &amp; AI Engineer with 7+ years building and deploying machine vision systems in pharmaceutical and industrial environments.
-        I bridge hands-on delivery with technical leadership: inspection systems, validation-aware software, local GenAI workflows and solution architecture that can survive real production constraints.
+        Senior Computer Vision &amp; AI Engineer with 7+ years deploying vision systems in pharmaceutical manufacturing.
+        Now building auditable LLM multi-agent pipelines (LangGraph, RAG, FastAPI) for GxP and 21 CFR Part 11 environments.
+        PhD candidate researching LLM-based generation of GxP verification documentation.
       </p>
+      <div class="hero-status"><span class="status-dot"></span>Technical Referent · ALTEN Spain → Grifols · Barcelona</div>
       <div class="hero-chips">
         <span class="chip">Industrial Computer Vision</span>
-        <span class="chip">Technical Leadership</span>
-        <span class="chip">Pharma · GMP · Validation</span>
+        <span class="chip">Multi-agent LLMs · LangGraph</span>
+        <span class="chip">GxP · 21 CFR Part 11</span>
         <span class="chip">Cognex · Deep Learning</span>
-        <span class="chip">Local LLMs · RAG · Reporting</span>
+        <span class="chip">RAG · FastAPI · Local LLMs</span>
       </div>
       <div class="hero-ctas">
         <a href="#case-study" class="btn-primary">See flagship case →</a>
+        <a href="#demos" class="btn-secondary">Watch TRACER demo</a>
         <a href="#contact" class="btn-secondary">Contact</a>
       </div>
     </div>
 
     <div class="photo-card">
       <div class="photo-frame">
-        <img id="photoImg" src="mi_foto.png" alt="Profile photo" style="display:block;">
+        <img id="photoImg" src="mi_foto.png" alt="Juan Oliván" style="display:block;">
       </div>
 
       <div class="photo-bio">
         <div class="bio-label">Positioning</div>
-        <p class="bio-text">I work at the intersection of industrial computer vision, validation discipline and practical AI adoption. Beyond model building, I focus on what makes systems usable in the real world: integration, robustness, evidence, documentation and operational trust.<br><br>That combination makes me especially strong for senior IC, technical lead and principal-track roles in regulated or high-stakes industrial environments.</p>
+        <p class="bio-text">I work where industrial computer vision, validation discipline and generative AI meet. What makes systems usable in regulated environments is integration, robustness, evidence, documentation and operational trust, and I now extend that to LLM pipelines that generate and trace GxP documentation.</p>
       </div>
     </div>
   </div>
 
-  <div class="role-banner">
-    <div class="role-banner-icon">⚡</div>
-    <div class="role-banner-text">
-      <h4>Principal-track positioning</h4>
-      <p>Profile shaped for roles where companies need more than model development: technical ownership, cross-functional credibility and industrial AI execution that can actually be deployed. Strong fit for principal engineer, lead specialist and AI/CV solution roles.</p>
-      <span class="role-tag">Computer Vision · AI Systems · Technical Ownership</span>
+  <!-- BRIDGE STRIP -->
+  <div class="bridge">
+    <div class="bridge-step">
+      <div class="bridge-kicker">01 · Perceive</div>
+      <h4>Industrial Computer Vision</h4>
+      <p>Cognex, YOLO, U-Net and deep-learning inspection running on live pharmaceutical lines.</p>
+    </div>
+    <div class="bridge-arrow">→</div>
+    <div class="bridge-step">
+      <div class="bridge-kicker">02 · Reason</div>
+      <h4>Multi-agent LLM pipelines</h4>
+      <p>LangGraph, RAG and FastAPI, local-first where data cannot leave the site.</p>
+    </div>
+    <div class="bridge-arrow">→</div>
+    <div class="bridge-step">
+      <div class="bridge-kicker">03 · Prove</div>
+      <h4>Auditable GxP evidence</h4>
+      <p>Traceability and verification documentation under 21 CFR Part 11.</p>
     </div>
   </div>
 
   <!-- STATS -->
-  <!-- ✏️ Update numbers to match your reality -->
   <div class="stats">
     <div class="stat-card">
       <div class="stat-num">7<span>+</span></div>
-      <div class="stat-label">years in Computer Vision</div>
+      <div class="stat-label">years in industrial Computer Vision</div>
     </div>
     <div class="stat-card">
       <div class="stat-num">30<span>+</span></div>
-      <div class="stat-label">high-impact CV & AI projects across career</div>
+      <div class="stat-label">CV &amp; AI projects delivered across my career</div>
     </div>
     <div class="stat-card">
-      <div class="stat-num">1<span>+</span></div>
-      <div class="stat-label">junior engineers mentored</div>
+      <div class="stat-num">0.09<span>%</span></div>
+      <div class="stat-label">label-inspection reject rate, down from 0.78%</div>
     </div>
     <div class="stat-card">
-      <div class="stat-num">3</div>
-      <div class="stat-label">degrees in AI & Data</div>
+      <div class="stat-num">PhD</div>
+      <div class="stat-label">candidate · plus MSc and MBA in AI &amp; Data</div>
     </div>
   </div>
 
@@ -749,7 +812,7 @@
           </svg>
         </div>
         <h3 class="pillar-title">Deep Learning from scratch</h3>
-        <p class="pillar-desc">Custom neural network architectures built from the ground up. Designed a ResNet-style CNN for gaze estimation that outperformed ETH-XGaze at 97% accuracy.</p>
+        <p class="pillar-desc">Custom neural network architectures built from the ground up. Designed a ResNet-style CNN for gaze estimation reaching 97% accuracy.</p>
         <div class="pillar-tags">
           <span>Keras</span><span>PyTorch</span><span>ResNet</span><span>HuggingFace</span>
         </div>
@@ -778,9 +841,9 @@
           </svg>
         </div>
         <h3 class="pillar-title">GxP Doc Automation</h3>
-        <p class="pillar-desc">Unique niche — automating regulated documentation (SRS, DS, SDS, traceability matrices) with local AI. Combining GxP compliance knowledge with generative AI engineering.</p>
+        <p class="pillar-desc">Multi-agent LLM pipelines (LangGraph) that automate regulated documentation: SRS, DS, SDS, verification test cases and traceability matrices. GxP compliance knowledge combined with generative AI engineering.</p>
         <div class="pillar-tags">
-          <span>TRACER</span><span>GxP</span><span>Mistral</span><span>python-docx</span>
+          <span>TRACER</span><span>LangGraph</span><span>Multi-agent</span><span>GxP</span><span>python-docx</span>
         </div>
       </div>
 
@@ -828,7 +891,7 @@
         <p>
           Acting as the go-to technical reference for Computer Vision initiatives in <strong>Manufacturing Engineering</strong> within a GxP pharmaceutical environment.
           Responsible for validated CV delivery, test strategy in Jama &amp; Jira, and cross-functional collaboration with automation, quality and compliance teams.
-          Combining <strong>Cognex expertise</strong>, deep learning and <strong>fully local AI tools</strong> to solve production and documentation challenges under real industrial constraints.
+          Combining <strong>Cognex expertise</strong>, deep learning and <strong>LLM multi-agent pipelines</strong> (LangGraph, RAG, local models) to solve production and documentation challenges under real industrial constraints.
         </p>
         <span class="role-tag">Technical Referent · Manufacturing Engineering · Computer Vision · Local AI · GMP · Jama / Jira</span>
       </div>
@@ -849,12 +912,12 @@
           <span>Reject rate reduction after masking strategy and retraining in production-oriented evaluation.</span>
         </div>
         <div class="case-metric">
-          <strong>×8.6 lower</strong>
+          <strong>8.6× lower</strong>
           <span>Relative reject-rate improvement while preserving focus on true defects.</span>
         </div>
         <div class="case-metric">
-          <strong>Validated mindset</strong>
-          <span>Approach designed for regulated environments where traceability and deployment discipline matter.</span>
+          <strong>ROC + confusion matrix</strong>
+          <span>Evidence used to justify the change; approach designed for regulated environments where traceability and deployment discipline matter.</span>
         </div>
       </div>
       <div class="case-grid">
@@ -868,7 +931,7 @@
         </div>
         <div class="case-cell">
           <div class="case-cell-label">Why it matters</div>
-          <p>This is the kind of work recruiters care about: not just building a model, but adapting it to industrial reality, reducing operational friction and making it deployable.</p>
+          <p>Not just building a model, but adapting it to industrial reality, reducing operational friction and making it deployable.</p>
         </div>
       </div>
     </div>
@@ -884,9 +947,9 @@
         <div class="project-icon" style="background:rgba(200,245,66,0.12);">🔬</div>
         <h3>TRACER</h3>
         <div class="impact-line"><strong>Fully local workflow</strong> · regulatory documentation automation for sensitive environments</div>
-        <p>Traceability &amp; Compliance Engine for Regulated Software. Local AI system that structures GxP documentation outputs from URS inputs, helping reduce repetitive manual drafting while keeping data on-premises.</p>
+        <p>Traceability &amp; Compliance Engine for Regulated Software. Multi-agent pipeline (LangGraph) that derives the GxP documentation chain (URS → SRS → DS → SDS → MSDS) and verification test cases with end-to-end traceability. Local-first and auditable. Basis of my PhD research.</p>
         <div class="project-tags">
-          <span class="ptag">Python</span><span class="ptag">Streamlit</span><span class="ptag">Ollama</span><span class="ptag">ChromaDB</span><span class="ptag">Mistral 7B</span><span class="ptag">GxP</span>
+          <span class="ptag">LangGraph</span><span class="ptag">Python</span><span class="ptag">Streamlit</span><span class="ptag">Ollama</span><span class="ptag">ChromaDB</span><span class="ptag">GxP</span>
         </div>
       </div>
 
@@ -961,7 +1024,6 @@
         <div class="demo-header" onclick="toggleDemo('demo1')">
           <span class="demo-num">01</span>
           <div class="demo-meta">
-            <!-- ✏️ Edit demo title/subtitle/badges -->
             <div class="demo-title">Eye tracking — real-time gaze detection (MSc thesis)</div>
             <div class="demo-sub">Custom CNN 97% accuracy · MediaPipe · Tkinter UI · webcam only</div>
             <div class="demo-badges">
@@ -976,7 +1038,7 @@
         <div class="demo-body" id="body1">
           <div class="demo-player">
             <div class="video-placeholder" id="vp1">
-              <iframe
+              <iframe loading="lazy"
                 width="100%"
                 height="315"
                 src="https://www.youtube.com/embed/2eXHXOJ3FP0"
@@ -996,6 +1058,7 @@
             <div class="demo-title">TRACER — GxP documentation AI agent</div>
             <div class="demo-sub">100% local · Mistral 7B · ChromaDB · Game Boy UI</div>
             <div class="demo-badges">
+              <span class="demo-badge">LangGraph</span>
               <span class="demo-badge">Streamlit</span>
               <span class="demo-badge">Ollama</span>
               <span class="demo-badge">Mistral 7B</span>
@@ -1007,7 +1070,7 @@
         <div class="demo-body" id="body2">
           <div class="demo-player">
             <div class="video-placeholder" id="vp2">
-              <iframe
+              <iframe loading="lazy"
                 width="100%"
                 height="315"
                 src="https://www.youtube.com/embed/ZF6kEoN3sDY"
@@ -1061,7 +1124,7 @@
         <div class="demo-body" id="body4">
           <div class="demo-player">
             <div class="video-placeholder" id="vp4">
-              <iframe
+              <iframe loading="lazy"
                 width="100%"
                 height="315"
                 src="https://www.youtube.com/embed/xMBShOwR4QI"
@@ -1100,63 +1163,31 @@
     </div>
   </div>
 
-  <!-- SKILLS -->  <div class="section" id="skills">
+  <!-- SKILLS -->
+  <div class="section" id="skills">
     <div class="section-header"><h2>Skills</h2></div>
 
-    <!-- Cognex featured block — full width -->
     <div style="background:var(--bg2);border:1px solid rgba(200,245,66,0.2);border-left:3px solid var(--accent);border-radius:var(--radius);padding:1.2rem 1.5rem;margin-bottom:12px;">
       <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent);margin-bottom:14px;">★ Cognex Ecosystem — core expertise</div>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px;">
-        <div class="skill-row"><span class="skill-name" style="min-width:140px;">In-Sight Explorer</span><div class="skill-bar-bg"><div class="skill-bar-fill" style="width:96%"></div></div></div>
-        <div class="skill-row"><span class="skill-name" style="min-width:140px;">VisionPro</span><div class="skill-bar-bg"><div class="skill-bar-fill" style="width:93%"></div></div></div>
-        <div class="skill-row"><span class="skill-name" style="min-width:140px;">Cognex ViDi (Deep Learning)</span><div class="skill-bar-bg"><div class="skill-bar-fill" style="width:89%"></div></div></div>
-        <div class="skill-row"><span class="skill-name" style="min-width:140px;">3D Vision (Cognex)</span><div class="skill-bar-bg"><div class="skill-bar-fill" style="width:82%"></div></div></div>
-        <div class="skill-row"><span class="skill-name" style="min-width:140px;">In-Sight Vision Suite</span><div class="skill-bar-bg"><div class="skill-bar-fill" style="width:91%"></div></div></div>
-        <div class="skill-row"><span class="skill-name" style="min-width:140px;">Spreadsheet Interface</span><div class="skill-bar-bg"><div class="skill-bar-fill" style="width:88%"></div></div></div>
-      </div>
+      <div class="skill-chips"><span class="skill-chip core">In-Sight Explorer</span><span class="skill-chip core">VisionPro</span><span class="skill-chip core">ViDi (Deep Learning)</span><span class="skill-chip core">3D Vision</span><span class="skill-chip core">In-Sight Vision Suite</span><span class="skill-chip core">Spreadsheet Interface</span></div>
     </div>
 
     <div class="skills-grid">
       <div class="skill-group">
+        <div class="skill-group-title">GenAI &amp; multi-agent systems</div>
+        <div class="skill-chips"><span class="skill-chip">LangGraph</span><span class="skill-chip">Multi-agent orchestration</span><span class="skill-chip">RAG</span><span class="skill-chip">LangChain</span><span class="skill-chip">Ollama · Mistral · phi3</span><span class="skill-chip">ChromaDB · embeddings</span><span class="skill-chip">FastAPI</span><span class="skill-chip">Streamlit · PySide6</span></div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-title">Validation &amp; GxP</div>
+        <div class="skill-chips"><span class="skill-chip">GMP</span><span class="skill-chip">21 CFR Part 11</span><span class="skill-chip">OQ / PQ protocols</span><span class="skill-chip">Test &amp; validation</span><span class="skill-chip">Traceability</span><span class="skill-chip">Jama · Jira</span><span class="skill-chip">Technical mentoring</span></div>
+      </div>
+      <div class="skill-group">
         <div class="skill-group-title">Computer Vision (custom)</div>
-        <div class="skill-bars">
-          <div class="skill-row"><span class="skill-name">YOLO / detection</span><div class="skill-bar-bg"><div class="skill-bar-fill" style="width:93%"></div></div></div>
-          <div class="skill-row"><span class="skill-name">Segmentation (U-Net)</span><div class="skill-bar-bg"><div class="skill-bar-fill" style="width:87%"></div></div></div>
-          <div class="skill-row"><span class="skill-name">OCR / image processing</span><div class="skill-bar-bg"><div class="skill-bar-fill" style="width:83%"></div></div></div>
-          <div class="skill-row"><span class="skill-name">ONNX Runtime</span><div class="skill-bar-bg"><div class="skill-bar-fill" style="width:79%"></div></div></div>
-          <div class="skill-row"><span class="skill-name">MediaPipe / OpenCV</span><div class="skill-bar-bg"><div class="skill-bar-fill" style="width:85%"></div></div></div>
-        </div>
+        <div class="skill-chips"><span class="skill-chip">YOLO v8</span><span class="skill-chip">U-Net segmentation</span><span class="skill-chip">OCR</span><span class="skill-chip">ONNX Runtime</span><span class="skill-chip">OpenCV</span><span class="skill-chip">MediaPipe</span></div>
       </div>
       <div class="skill-group">
-        <div class="skill-group-title">Deep Learning & Models</div>
-        <div class="skill-bars">
-          <div class="skill-row"><span class="skill-name">Keras / PyTorch</span><div class="skill-bar-bg"><div class="skill-bar-fill" style="width:82%"></div></div></div>
-          <div class="skill-row"><span class="skill-name">Custom CNN / ResNet</span><div class="skill-bar-bg"><div class="skill-bar-fill" style="width:84%"></div></div></div>
-          <div class="skill-row"><span class="skill-name">Transformers (HF)</span><div class="skill-bar-bg"><div class="skill-bar-fill" style="width:80%"></div></div></div>
-          <div class="skill-row"><span class="skill-name">Transfer learning</span><div class="skill-bar-bg"><div class="skill-bar-fill" style="width:83%"></div></div></div>
-          <div class="skill-row"><span class="skill-name">Fine-tuning (LoRA/QLoRA)</span><div class="skill-bar-bg"><div class="skill-bar-fill" style="width:75%"></div></div></div>
-          <div class="skill-row"><span class="skill-name">HuggingFace 🤗</span><div class="skill-bar-bg"><div class="skill-bar-fill" style="width:78%"></div></div></div>
-        </div>
-      </div>
-      <div class="skill-group">
-        <div class="skill-group-title">Generative AI & Local LLMs</div>
-        <div class="skill-bars">
-          <div class="skill-row"><span class="skill-name">Python / FastAPI</span><div class="skill-bar-bg"><div class="skill-bar-fill" style="width:91%"></div></div></div>
-          <div class="skill-row"><span class="skill-name">Ollama / Mistral / phi3</span><div class="skill-bar-bg"><div class="skill-bar-fill" style="width:88%"></div></div></div>
-          <div class="skill-row"><span class="skill-name">LangChain / RAG</span><div class="skill-bar-bg"><div class="skill-bar-fill" style="width:87%"></div></div></div>
-          <div class="skill-row"><span class="skill-name">ChromaDB / embeddings</span><div class="skill-bar-bg"><div class="skill-bar-fill" style="width:82%"></div></div></div>
-          <div class="skill-row"><span class="skill-name">Streamlit / PySide6</span><div class="skill-bar-bg"><div class="skill-bar-fill" style="width:88%"></div></div></div>
-        </div>
-      </div>
-      <div class="skill-group">
-        <div class="skill-group-title">Validation & QA (GxP)</div>
-        <div class="skill-bars">
-          <div class="skill-row"><span class="skill-name">Test & Validation</span><div class="skill-bar-bg"><div class="skill-bar-fill" style="width:94%"></div></div></div>
-          <div class="skill-row"><span class="skill-name">GMP environments</span><div class="skill-bar-bg"><div class="skill-bar-fill" style="width:90%"></div></div></div>
-          <div class="skill-row"><span class="skill-name">OQ / PQ protocols</span><div class="skill-bar-bg"><div class="skill-bar-fill" style="width:87%"></div></div></div>
-          <div class="skill-row"><span class="skill-name">Jama / Jira</span><div class="skill-bar-bg"><div class="skill-bar-fill" style="width:85%"></div></div></div>
-          <div class="skill-row"><span class="skill-name">Technical mentoring</span><div class="skill-bar-bg"><div class="skill-bar-fill" style="width:82%"></div></div></div>
-        </div>
+        <div class="skill-group-title">Deep Learning &amp; models</div>
+        <div class="skill-chips"><span class="skill-chip">Keras</span><span class="skill-chip">PyTorch</span><span class="skill-chip">Custom CNN · ResNet</span><span class="skill-chip">Transformers</span><span class="skill-chip">Transfer learning</span><span class="skill-chip">LoRA · QLoRA</span><span class="skill-chip">HuggingFace</span></div>
       </div>
     </div>
   </div>
@@ -1165,6 +1196,11 @@
   <div class="section" id="education">
     <div class="section-header"><h2>Education</h2></div>
     <div class="edu-grid">
+      <div class="edu-card edu-wide">
+        <div class="edu-degree">PhD in Data Science <span style="font-weight:400;color:var(--text3);">· in progress</span></div>
+        <div class="edu-school">Universidad Loyola Andalucía</div>
+        <div class="edu-note">Research: LLM-based automated generation of GxP verification documentation.</div>
+      </div>
       <div class="edu-card">
         <div class="edu-degree">Global MBA in AI &amp; Data Science</div>
         <div class="edu-school">ENEB — Escuela de Negocios Europea de Barcelona</div>
@@ -1222,7 +1258,7 @@
       </div>
       <div class="why-card">
         <h3>Validation-aware engineering</h3>
-        <p><strong>I speak both technical and regulated language.</strong> That matters in pharma and other high-stakes sectors where evidence, traceability and documentation quality influence adoption.</p>
+        <p><strong>I speak both technical and regulated language.</strong> That matters in pharma and other high-stakes sectors where evidence, traceability and documentation quality influence adoption. It is also why my current research focuses on making LLM pipelines auditable.</p>
       </div>
       <div class="why-card">
         <h3>Ready for principal-track scope</h3>
@@ -1242,8 +1278,8 @@
         <div class="tl-body">
           <div class="where">ALTEN Spain · Grifols</div>
           <h4>Senior Computer Vision Engineer · Technical Referent</h4>
-          <p>Acting as technical referent for industrial CV initiatives in a GMP pharmaceutical environment. Owning inspection strategy, validation-aware delivery, stakeholder discussions and solution evolution from concept to production-facing execution.<div class="tl-impact">Impact · Technical ownership, mentoring and AI/CV positioning inside client delivery</div></p>
-          <div class="tl-tags"><span class="tl-tag">Cognex</span><span class="tl-tag">GMP</span><span class="tl-tag">Jama</span><span class="tl-tag">Jira</span><span class="tl-tag">Technical Referent</span><span class="tl-tag">Generative AI</span></div>
+          <p>Acting as technical referent for industrial CV initiatives in a GMP pharmaceutical environment. Owning inspection strategy, validation-aware delivery, stakeholder discussions and solution evolution from concept to production-facing execution. Leading LLM-based multi-agent documentation pipelines (LangGraph, RAG).</p><div class="tl-impact">Impact · Technical ownership, mentoring and AI/CV positioning inside client delivery</div>
+          <div class="tl-tags"><span class="tl-tag">Cognex</span><span class="tl-tag">GMP</span><span class="tl-tag">Jama</span><span class="tl-tag">Jira</span><span class="tl-tag">Technical Referent</span><span class="tl-tag">Generative AI</span><span class="tl-tag">LangGraph</span></div>
         </div>
       </div>
 
@@ -1253,7 +1289,7 @@
         <div class="tl-body">
           <div class="where">ALTEN Spain · Grifols</div>
           <h4>Senior CV Test &amp; Validation Engineer</h4>
-          <p>Designed and executed test strategies for machine vision systems under GxP constraints, combining Cognex development with validation discipline for pharmaceutical quality control.<div class="tl-impact">Impact · Bridged testing, validation and practical CV engineering</div></p>
+          <p>Designed and executed test strategies for machine vision systems under GxP constraints, combining Cognex development with validation discipline for pharmaceutical quality control.</p><div class="tl-impact">Impact · Bridged testing, validation and practical CV engineering</div>
           <div class="tl-tags"><span class="tl-tag">Cognex</span><span class="tl-tag">VisionPro</span><span class="tl-tag">GxP</span><span class="tl-tag">OQ/PQ</span></div>
         </div>
       </div>
@@ -1275,7 +1311,7 @@
         <div class="tl-body">
           <div class="where dim">ALTEN Spain · Grifols</div>
           <h4>Artificial Vision Test Engineer — QA Validation</h4>
-          <p>Prepared manual and automated validation plans in Jama/Jira while developing Cognex applications for pharmaceutical quality control. Built the documentation and execution discipline that later supported broader technical ownership.<div class="tl-impact">Impact · Strong foundation in regulated delivery and project coordination</div></p>
+          <p>Prepared manual and automated validation plans in Jama/Jira while developing Cognex applications for pharmaceutical quality control. Built the documentation and execution discipline that later supported broader technical ownership.</p><div class="tl-impact">Impact · Strong foundation in regulated delivery and project coordination</div>
           <div class="tl-tags"><span class="tl-tag">Cognex</span><span class="tl-tag">In-Sight Explorer</span><span class="tl-tag">QA</span></div>
         </div>
       </div>
@@ -1286,7 +1322,7 @@
         <div class="tl-body">
           <div class="where dim">BCNVision</div>
           <h4>Vision Application Engineer</h4>
-          <p>Development of Cognex vision applications for quality control across multiple industries. Combined delivery with pre-sales support, helping translate technical capability into customer-facing value and solution credibility.<div class="tl-impact">Impact · Engineering plus consultative pre-sales value</div></p>
+          <p>Development of Cognex vision applications for quality control across multiple industries. Combined delivery with pre-sales support, helping translate technical capability into customer-facing value and solution credibility.</p><div class="tl-impact">Impact · Engineering plus consultative pre-sales value</div>
           <div class="tl-tags"><span class="tl-tag">Cognex</span><span class="tl-tag">3D Vision</span><span class="tl-tag">Pre-sales</span></div>
         </div>
       </div>
@@ -1297,7 +1333,7 @@
         <div class="tl-body">
           <div class="where dim">SEA Vision</div>
           <h4>Field Engineer — Artificial Vision</h4>
-          <p>Commissioning of CV systems for pharmaceutical quality control in Italy, Germany and Spain. High-accountability client-facing role that strengthened deployment discipline, troubleshooting and execution under real factory constraints.<div class="tl-impact">Impact · International commissioning in demanding regulated settings</div></p>
+          <p>Commissioning of CV systems for pharmaceutical quality control in Italy, Germany and Spain. High-accountability client-facing role that strengthened deployment discipline, troubleshooting and execution under real factory constraints.</p><div class="tl-impact">Impact · International commissioning in demanding regulated settings</div>
           <div class="tl-tags"><span class="tl-tag">Commissioning</span><span class="tl-tag">Pharma</span><span class="tl-tag">Field work</span></div>
         </div>
       </div>
@@ -1308,16 +1344,15 @@
 
 
   <!-- CONTACT -->
-  <!-- ✏️ Replace # hrefs with your real LinkedIn, GitHub and email -->
   <div class="section" id="contact">
     <div class="section-header"><h2>Contact</h2></div>
     <div class="contact-box">
       <div class="contact-text">
         <h3>Contact</h3>
-        <p>Best fit for senior computer vision, AI systems, technical referent and specialist leadership roles where industrial depth, delivery credibility and technical ownership are all required.</p>
+        <p>Best fit for senior computer vision, regulated GenAI / multi-agent systems and technical leadership roles where industrial depth, delivery credibility and technical ownership are all required.</p>
       </div>
       <div class="contact-links">
-        <a href="https://www.linkedin.com/public-profile/settings/?trk=d_flagship3_profile_self_view_public_profile&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3BaoLpZ7Z0S8mRG3yEid4swQ%3D%3D" class="contact-link" target="_blank">LinkedIn</a>
+        <a href="https://www.linkedin.com/in/juan-olivan-9a3210176/" class="contact-link" target="_blank" rel="noopener">LinkedIn</a>
         <a href="https://github.com/Jhon2704" class="contact-link" target="_blank">GitHub</a>
         <a href="mailto:joanolivan27@gmail.com" class="contact-link">Email</a>
       </div>
@@ -1325,7 +1360,6 @@
   </div>
 
   <!-- FOOTER -->
-  <!-- ✏️ Update name and year -->
   <footer>
     <p>© 2026 · Juan Oliván · Computer Vision & AI Engineer</p>
     <p>Barcelona, Catalonia · Spain</p>
@@ -1389,8 +1423,8 @@
     vid.oncontextmenu = (e) => e.preventDefault();
     vid.style.cssText = 'width:100%;height:100%;border-radius:8px;display:block;';
     vid.onerror = () => {
-      placeholder.style.background = '#1a0a0a';
-      placeholder.innerHTML = '<div style="text-align:center;padding:2rem;font-family:\'DM Mono\',monospace;"><p style="font-size:12px;color:#e24b4a;margin-bottom:8px;">⚠ File not found</p><p style="font-size:11px;color:#55545a;">Check that <span style="color:#c8f542;">' + name + '</span><br>is in the <span style="color:#c8f542;">videos/</span> folder</p></div>';
+      placeholder.style.background = '#111114';
+      placeholder.innerHTML = '<div style="text-align:center;padding:2rem;font-family:\'DM Mono\',monospace;"><p style="font-size:12px;color:#c8f542;margin-bottom:8px;">Demo available on request</p><p style="font-size:11px;color:#8b8a91;">Recorded on a live production line.<br>Get in touch to arrange a walkthrough.</p></div>';
     };
     placeholder.appendChild(vid);
   }
