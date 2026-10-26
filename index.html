@@ -2,1439 +2,496 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Juan Oliván · Computer Vision & AI Engineer</title>
-<meta name="description" content="Juan Oliván — Senior Computer Vision & AI Engineer. Auditable LLM multi-agent pipelines and deep-learning inspection in GxP-regulated pharma (21 CFR Part 11).">
-<meta name="theme-color" content="#09090b">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Juan Oliván, senior computer vision and AI engineer. Industrial vision inspection and local GenAI for GxP-regulated pharmaceutical manufacturing.">
+<meta name="theme-color" content="#1A5BD9">
 <link rel="canonical" href="https://jhon2704.github.io/juanolivan.github.io/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Juan Oliván · Computer Vision & AI Engineer">
-<meta property="og:description" content="LLM multi-agent pipelines and industrial computer vision in GxP / 21 CFR Part 11 environments.">
+<meta property="og:title" content="Juan Oliván · Computer Vision &amp; AI Engineer">
+<meta property="og:description" content="Industrial AI systems built for production, validation and scale. Computer vision and local GenAI in GxP-regulated environments.">
 <meta property="og:url" content="https://jhon2704.github.io/juanolivan.github.io/">
 <meta property="og:image" content="https://jhon2704.github.io/juanolivan.github.io/mi_foto.png">
 <meta name="twitter:card" content="summary">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2309090b'/%3E%3Ctext x='16' y='22' font-size='15' font-family='monospace' text-anchor='middle' fill='%23c8f542'%3EJO%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231A5BD9'/%3E%3Ctext x='16' y='22' font-size='15' font-family='sans-serif' font-weight='700' text-anchor='middle' fill='white'%3EJO%3C/text%3E%3C/svg%3E">
+<title>Juan Oliván Portfolio</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=Outfit:wght@300;400;500;600&display=swap">
 <style>
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-  :root {
-    --bg:      #09090b;
-    --bg2:     #111114;
-    --bg3:     #18181c;
-    --bg4:     #1f1f24;
-    --border:  rgba(255,255,255,0.07);
-    --border2: rgba(255,255,255,0.12);
-    --text:    #f0eff2;
-    --text2:   #8b8a91;
-    --text3:   #55545a;
-    --accent:  #c8f542;
-    --accent2: rgba(200,245,66,0.10);
-    --accent3: rgba(200,245,66,0.05);
-    --radius:  12px;
-    --radius-sm: 8px;
-  }
-
-  html { scroll-behavior: smooth; }
-
-  body {
-    background: var(--bg);
-    color: var(--text);
-    font-family: 'Outfit', sans-serif;
-    font-size: 16px;
-    line-height: 1.6;
-    min-height: 100vh;
-    overflow-x: hidden;
-  }
-
-  body::before {
-    content: '';
-    position: fixed;
-    inset: 0;
-    background-image:
-      linear-gradient(rgba(255,255,255,0.024) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(255,255,255,0.024) 1px, transparent 1px);
-    background-size: 60px 60px;
-    pointer-events: none;
-    z-index: 0;
-  }
-
-  .glow-orb {
-    position: fixed; width: 600px; height: 600px; border-radius: 50%;
-    background: radial-gradient(circle, rgba(200,245,66,0.07) 0%, transparent 70%);
-    top: -200px; right: -200px; pointer-events: none; z-index: 0;
-  }
-  .glow-orb2 {
-    position: fixed; width: 400px; height: 400px; border-radius: 50%;
-    background: radial-gradient(circle, rgba(100,150,255,0.06) 0%, transparent 70%);
-    bottom: 100px; left: -100px; pointer-events: none; z-index: 0;
-  }
-
-  .page { position: relative; z-index: 1; max-width: 900px; margin: 0 auto; padding: 0 2rem 6rem; }
-
-  /* NAV */
-  nav {
-    display: flex; justify-content: space-between; align-items: center;
-    padding: 2rem 0 2.5rem; border-bottom: 1px solid var(--border);
-    margin-bottom: 4rem; position: sticky; top: 0;
-    background: rgba(9,9,11,0.88); backdrop-filter: blur(14px); z-index: 100;
-    margin-left: -2rem; margin-right: -2rem; padding-left: 2rem; padding-right: 2rem;
-  }
-  .nav-logo { font-family: 'DM Mono', monospace; font-size: 13px; color: var(--text2); letter-spacing: 0.08em; }
-  .nav-logo strong { color: var(--text); font-weight: 500; }
-  .nav-links { display: flex; gap: 1.8rem; list-style: none; flex-wrap: wrap; }
-  .nav-links a { font-size: 13px; color: var(--text2); text-decoration: none; transition: color 0.2s; }
-  .nav-links a:hover { color: var(--text); }
-
-  /* HERO */
-  .hero { display: grid; grid-template-columns: 1fr 270px; gap: 3rem; align-items: start; margin-bottom: 4rem; }
-  .hero-tag {
-    font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.2em;
-    text-transform: uppercase; color: var(--accent); margin-bottom: 1.2rem;
-    display: flex; align-items: center; gap: 10px;
-  }
-  .hero-tag::before { content: ''; display: inline-block; width: 24px; height: 1px; background: var(--accent); }
-  .hero h1 {
-    font-family: 'DM Serif Display', serif; font-size: clamp(2.2rem, 5vw, 3.6rem);
-    font-weight: 400; line-height: 1.08; margin-bottom: 1.5rem; letter-spacing: -0.01em;
-  }
-  .hero h1 em { font-style: italic; color: var(--text2); }
-  .hero-desc { font-size: 15px; color: var(--text2); line-height: 1.75; margin-bottom: 2rem; max-width: 480px; }
-  .hero-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 2.5rem; }
-  .chip {
-    font-family: 'DM Mono', monospace; font-size: 11px; padding: 5px 13px;
-    border: 1px solid var(--border2); border-radius: 100px; color: var(--text2);
-    background: var(--bg2); letter-spacing: 0.04em; transition: border-color 0.2s, color 0.2s;
-  }
-  .chip:hover { border-color: var(--accent); color: var(--accent); }
-  .hero-ctas { display: flex; gap: 12px; flex-wrap: wrap; }
-  .btn-primary {
-    font-family: 'Outfit', sans-serif; font-size: 13px; font-weight: 500; padding: 11px 24px;
-    background: var(--accent); color: #0a0a0a; border: none; border-radius: var(--radius-sm);
-    cursor: pointer; text-decoration: none; display: inline-block; transition: opacity 0.2s, transform 0.15s;
-  }
-  .btn-primary:hover { opacity: 0.88; transform: translateY(-1px); }
-  .btn-secondary {
-    font-family: 'Outfit', sans-serif; font-size: 13px; padding: 11px 24px; background: transparent;
-    color: var(--text2); border: 1px solid var(--border2); border-radius: var(--radius-sm);
-    cursor: pointer; text-decoration: none; display: inline-block; transition: border-color 0.2s, color 0.2s;
-  }
-  .btn-secondary:hover { border-color: var(--text2); color: var(--text); }
-
-  /* PHOTO + BIO */
-  .photo-card { display: flex; flex-direction: column; gap: 16px; }
-  .photo-frame {
-    width: 100%; aspect-ratio: 3/4; border-radius: var(--radius);
-    border: 1px solid var(--border2); overflow: hidden; position: relative;
-    background: var(--bg3); cursor: default;
-  }
-  .photo-frame img { width: 100%; height: 100%; object-fit: cover; display: block; }
-  .photo-placeholder { display:none; }
-  .photo-icon {
-    width: 64px; height: 64px; border-radius: 50%; border: 1px dashed var(--border2);
-    display: flex; align-items: center; justify-content: center; color: var(--text3);
-  }
-  .photo-placeholder p { font-size: 12px; color: var(--text3); text-align: center; font-family: 'DM Mono', monospace; letter-spacing: 0.04em; line-height: 1.6; }
-  .photo-overlay {
-    position: absolute; inset: 0; background: rgba(9,9,11,0.6);
-    display: flex; align-items: center; justify-content: center; opacity: 0;
-    transition: opacity 0.2s; font-size: 12px; color: var(--accent);
-    font-family: 'DM Mono', monospace; letter-spacing: 0.08em;
-  }
-  .photo-frame:hover .photo-overlay { opacity: 0; }
-  #photoInput { display: none; }
-  .photo-bio { background: var(--bg2); border: 1px solid var(--border); border-radius: var(--radius); padding: 1rem 1.2rem; }
-  .bio-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text3); margin-bottom: 8px; }
-  .bio-text {
-    font-size: 13px; color: var(--text2); line-height: 1.7;
-    background: transparent; width: 100%; font-family: 'Outfit', sans-serif;
-    margin: 0;
-  }
-
-  /* STATS */
-  .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 4rem; }
-  .stat-card { background: var(--bg2); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.25rem 1.5rem; transition: border-color 0.2s; }
-  .stat-card:hover { border-color: var(--border2); }
-  .stat-num { font-family: 'DM Serif Display', serif; font-size: 2.2rem; font-weight: 400; color: var(--text); line-height: 1; margin-bottom: 6px; }
-  .stat-num span { color: var(--accent); }
-  .stat-label { font-size: 11px; color: var(--text3); line-height: 1.4; }
-
-  /* SECTION */
-  .section { margin-bottom: 4rem; }
-  .section-header { display: flex; align-items: center; gap: 16px; margin-bottom: 1.8rem; }
-  .section-header h2 { font-family: 'DM Mono', monospace; font-size: 11px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text3); white-space: nowrap; }
-  .section-header::after { content: ''; flex: 1; height: 1px; background: var(--border); }
-
-  /* ROLE BANNER */
-  .role-banner {
-    background: var(--bg2); border: 1px solid var(--border); border-left: 3px solid var(--accent);
-    border-radius: var(--radius); padding: 1.2rem 1.5rem; margin-bottom: 2rem;
-    display: flex; align-items: flex-start; gap: 1rem;
-  }
-  .role-banner-icon { font-size: 20px; flex-shrink: 0; margin-top: 2px; }
-  .role-banner-text h4 { font-size: 14px; font-weight: 500; color: var(--text); margin-bottom: 4px; }
-  .role-banner-text p { font-size: 13px; color: var(--text2); line-height: 1.6; }
-  .role-banner-text .role-tag {
-    display: inline-block; margin-top: 8px; font-family: 'DM Mono', monospace; font-size: 10px;
-    padding: 3px 10px; border-radius: 4px; background: var(--accent2); color: var(--accent); border: 1px solid rgba(200,245,66,0.25);
-  }
-
-  /* PROJECTS */
-  .projects { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 12px; }
-  .project-card {
-    background: var(--bg2); border: 1px solid var(--border); border-radius: var(--radius);
-    padding: 1.4rem; transition: border-color 0.2s, transform 0.2s;
-  }
-  .project-card:hover { border-color: var(--border2); transform: translateY(-2px); }
-  .project-card.featured { border-color: rgba(200,245,66,0.25); background: var(--accent3); }
-  .project-card.featured:hover { border-color: rgba(200,245,66,0.45); }
-  .project-featured-badge {
-    font-family: 'DM Mono', monospace; font-size: 10px; padding: 2px 8px;
-    background: var(--accent2); color: var(--accent); border-radius: 4px;
-    display: inline-block; margin-bottom: 10px; letter-spacing: 0.06em;
-  }
-  .project-icon { width: 38px; height: 38px; border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; margin-bottom: 1rem; font-size: 18px; }
-  .project-card h3 { font-size: 14px; font-weight: 500; color: var(--text); margin-bottom: 8px; }
-  .project-card p { font-size: 12px; color: var(--text2); line-height: 1.65; margin-bottom: 14px; }
-  .impact-line {
-    font-family: 'DM Mono', monospace;
-    font-size: 11px;
-    color: var(--accent);
-    letter-spacing: 0.03em;
-    margin-bottom: 10px;
-  }
-  .impact-line strong {
-    font-size: 13px;
-    color: var(--text);
-  }
-  .project-tags { display: flex; flex-wrap: wrap; gap: 5px; }
-  .ptag { font-family: 'DM Mono', monospace; font-size: 10px; padding: 3px 9px; border-radius: 4px; background: var(--bg4); color: var(--text3); border: 1px solid var(--border); }
-
-  /* DEMO ACCORDION */
-  .demo-list { display: flex; flex-direction: column; gap: 10px; }
-  .demo-item { border: 1px solid var(--border); border-radius: var(--radius); overflow: visible; background: var(--bg2); transition: border-color 0.2s; }
-  .demo-item.active { border-color: var(--border2); }
-  .demo-header { display: flex; align-items: center; gap: 16px; padding: 16px 20px; cursor: pointer; transition: background 0.15s; user-select: none; }
-  .demo-header:hover { background: var(--bg3); }
-  .demo-num { font-family: 'DM Mono', monospace; font-size: 11px; color: var(--text3); min-width: 22px; }
-  .demo-meta { flex: 1; }
-  .demo-title { font-size: 14px; font-weight: 500; color: var(--text); margin-bottom: 3px; }
-  .demo-sub { font-size: 12px; color: var(--text2); margin-bottom: 8px; }
-  .demo-badges { display: flex; gap: 6px; flex-wrap: wrap; }
-  .demo-badge { font-family: 'DM Mono', monospace; font-size: 10px; padding: 2px 8px; border-radius: 4px; background: var(--bg4); color: var(--text3); border: 1px solid var(--border); }
-  .demo-toggle {
-    display: flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 500;
-    color: var(--text2); background: var(--bg3); border: 1px solid var(--border2);
-    border-radius: var(--radius-sm); padding: 8px 16px; cursor: pointer; white-space: nowrap;
-    font-family: 'Outfit', sans-serif; transition: border-color 0.2s, color 0.2s, background 0.2s;
-  }
-  .demo-toggle:hover, .demo-toggle.open { border-color: var(--accent); color: var(--accent); background: var(--accent2); }
-  .arrow { display: inline-block; transition: transform 0.28s ease; font-size: 9px; }
-  .demo-toggle.open .arrow { transform: rotate(180deg); }
-  .demo-body { max-height: 0; overflow: hidden; transition: max-height 0.38s cubic-bezier(0.4,0,0.2,1); }
-  .demo-body.open { max-height: 800px; border-top: 1px solid var(--border); }
-  .demo-player { padding: 20px 20px 8px; }
-  .video-placeholder {
-    width: 100%; aspect-ratio: 16/9; border-radius: var(--radius-sm);
-    display: flex; flex-direction: column; align-items: center; justify-content: center;
-    gap: 16px; position: relative; overflow: hidden;
-  }
-  .video-placeholder video { width: 100%; height: 100%; object-fit: cover; border-radius: var(--radius-sm); display: block; }
-  .vid-bg1 { background: #0d1117; }
-  .vid-bg2 { background: #0a1628; }
-  .vid-bg3 { background: #111827; }
-  .vid-bg4 { background: #1a0a28; }
-  .vid-bg5 { background: #0d1a0a; }
-  .play-circle {
-    width: 60px; height: 60px; border-radius: 50%;
-    background: rgba(255,255,255,0.08); border: 1.5px solid rgba(255,255,255,0.2);
-    display: flex; align-items: center; justify-content: center; cursor: pointer;
-    transition: background 0.2s, border-color 0.2s;
-  }
-  .play-circle:hover { background: rgba(200,245,66,0.15); border-color: var(--accent); }
-  .play-tri { width:0; height:0; border-style:solid; border-width:10px 0 10px 19px; border-color:transparent transparent transparent rgba(255,255,255,0.85); margin-left:4px; }
-  .vid-label { font-family:'DM Mono',monospace; font-size:11px; color:rgba(255,255,255,0.28); letter-spacing:0.08em; }
-  .vid-duration { position:absolute; bottom:10px; right:12px; font-family:'DM Mono',monospace; font-size:10px; background:rgba(0,0,0,0.6); color:rgba(255,255,255,0.6); padding:3px 8px; border-radius:4px; }
-  .upload-area { padding: 12px 20px 18px; display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
-  .upload-btn { font-family: 'DM Mono', monospace; font-size: 11px; padding: 7px 16px; border: 1px dashed var(--border2); border-radius: var(--radius-sm); background: transparent; color: var(--text2); cursor: pointer; transition: border-color 0.2s, color 0.2s; }
-  .upload-btn:hover { border-color: var(--accent); color: var(--accent); }
-  .upload-hint-text { font-size: 11px; color: var(--text3); }
-  .upload-hint-text code { font-family: 'DM Mono', monospace; background: var(--bg4); padding: 1px 5px; border-radius: 3px; color: var(--accent); font-size: 10px; }
-  .upload-file-input { display: none; }
-  .vid-filename-row { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; width: 100%; }
-  .vid-filename-label { font-family: 'DM Mono', monospace; font-size: 11px; color: var(--text3); white-space: nowrap; }
-  .vid-filename-input {
-    flex: 1; min-width: 180px; font-family: 'DM Mono', monospace; font-size: 12px;
-    background: var(--bg3); border: 1px solid var(--border2); border-radius: var(--radius-sm);
-    color: var(--text); padding: 6px 12px; outline: none; transition: border-color 0.2s;
-  }
-  .vid-filename-input:focus { border-color: var(--accent); }
-  .vid-filename-input::placeholder { color: var(--text3); }
-  .vid-load-btn {
-    font-family: 'DM Mono', monospace; font-size: 12px; font-weight: 500;
-    padding: 7px 18px; background: var(--accent); color: #0a0a0a;
-    border: none; border-radius: var(--radius-sm); cursor: pointer;
-    white-space: nowrap; transition: opacity 0.2s;
-  }
-  .vid-load-btn:hover { opacity: 0.85; }
-
-  /* SKILLS */
-  .skills-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-  .skill-group { background: var(--bg2); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.2rem 1.4rem; }
-  .skill-group-title { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text3); margin-bottom: 14px; }
-  .skill-bars { display: flex; flex-direction: column; gap: 10px; }
-  .skill-row { display: flex; align-items: center; gap: 12px; }
-  .skill-name { font-size: 12px; color: var(--text2); min-width: 110px; }
-  .skill-bar-bg { flex: 1; height: 3px; background: var(--border); border-radius: 2px; overflow: hidden; }
-  .skill-bar-fill { height: 100%; border-radius: 2px; background: var(--accent); }
-
-  /* EDUCATION & CERTS */
-  .edu-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-  .edu-card { background: var(--bg2); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.2rem 1.4rem; transition: border-color 0.2s; }
-  .edu-card:hover { border-color: var(--border2); }
-  .edu-degree { font-size: 13px; font-weight: 500; color: var(--text); margin-bottom: 4px; }
-  .edu-school { font-size: 12px; color: var(--accent); font-family: 'DM Mono', monospace; margin-bottom: 4px; letter-spacing: 0.03em; }
-  .edu-year { font-size: 11px; color: var(--text3); font-family: 'DM Mono', monospace; }
-
-  .certs-list { display: flex; flex-direction: column; gap: 8px; margin-top: 1.5rem; }
-  .cert-item { display: flex; align-items: center; gap: 14px; background: var(--bg2); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 10px 16px; }
-  .cert-platform { font-family: 'DM Mono', monospace; font-size: 10px; padding: 3px 8px; border-radius: 4px; background: var(--bg4); color: var(--text3); border: 1px solid var(--border); white-space: nowrap; min-width: 54px; text-align: center; }
-  .cert-name { font-size: 13px; color: var(--text2); flex: 1; }
-  .cert-year { font-family: 'DM Mono', monospace; font-size: 11px; color: var(--text3); }
-
-  /* TIMELINE */
-  .timeline { display: flex; flex-direction: column; }
-  .tl-item { display: grid; grid-template-columns: 110px 1px 1fr; gap: 0 24px; padding-bottom: 2rem; }
-  .tl-date { font-family: 'DM Mono', monospace; font-size: 11px; color: var(--text3); text-align: right; padding-top: 3px; }
-  .tl-line { position: relative; background: var(--border); width: 1px; }
-  .tl-dot { position: absolute; top: 7px; left: 50%; transform: translateX(-50%); width: 8px; height: 8px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 10px var(--accent); }
-  .tl-dot.dim { background: var(--text3); box-shadow: none; }
-  .tl-body h4 { font-size: 14px; font-weight: 500; color: var(--text); margin-bottom: 4px; }
-  .tl-body .where { font-size: 11px; color: var(--accent); font-family: 'DM Mono', monospace; margin-bottom: 6px; letter-spacing: 0.04em; }
-  .tl-body .where.dim { color: var(--text3); }
-  .tl-body p { font-size: 13px; color: var(--text2); line-height: 1.6; }
-  .tl-tags { display: flex; gap: 5px; flex-wrap: wrap; margin-top: 8px; }
-  .tl-tag { font-family: 'DM Mono', monospace; font-size: 10px; padding: 2px 7px; border-radius: 4px; background: var(--bg4); color: var(--text3); border: 1px solid var(--border); }
-
-  /* HOW TO — info box */
-  .info-box {
-    background: var(--bg2); border: 1px solid var(--border); border-left: 3px solid rgba(100,150,255,0.5);
-    border-radius: var(--radius); padding: 1.2rem 1.5rem; margin-bottom: 1.5rem;
-  }
-  .info-box h4 { font-size: 13px; font-weight: 500; color: var(--text); margin-bottom: 8px; display: flex; align-items: center; gap: 8px; }
-  .info-box ol, .info-box ul { padding-left: 1.2rem; }
-  .info-box li { font-size: 12px; color: var(--text2); line-height: 1.8; }
-  .info-box code { font-family: 'DM Mono', monospace; font-size: 11px; background: var(--bg4); padding: 1px 5px; border-radius: 3px; color: var(--accent); }
-
-  /* CONTACT */
-  .contact-box {
-    border: 1px solid var(--border); border-radius: var(--radius); padding: 2rem 2.5rem;
-    display: flex; align-items: center; gap: 2rem; flex-wrap: wrap;
-    background: var(--bg2); position: relative; overflow: hidden;
-  }
-  .contact-box::before {
-    content: ''; position: absolute; top: -60px; right: -60px; width: 200px; height: 200px;
-    border-radius: 50%; background: radial-gradient(circle, rgba(200,245,66,0.06) 0%, transparent 70%); pointer-events: none;
-  }
-  .contact-text { flex: 1; min-width: 200px; }
-  .contact-text h3 { font-family: 'DM Serif Display', serif; font-size: 1.8rem; font-weight: 400; margin-bottom: 6px; }
-  .contact-text p { font-size: 14px; color: var(--text2); }
-  .contact-links { display: flex; gap: 10px; flex-wrap: wrap; }
-  .contact-link {
-    font-family: 'DM Mono', monospace; font-size: 12px; padding: 10px 18px;
-    border: 1px solid var(--border2); border-radius: var(--radius-sm); color: var(--text2);
-    text-decoration: none; transition: border-color 0.2s, color 0.2s, background 0.2s;
-  }
-  .contact-link:hover { border-color: var(--accent); color: var(--accent); background: var(--accent2); }
-
-  /* FOOTER */
-  footer { border-top: 1px solid var(--border); padding-top: 2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
-  footer p { font-family: 'DM Mono', monospace; font-size: 11px; color: var(--text3); letter-spacing: 0.04em; }
-
-  /* PILLARS */
-  .pillars-grid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 12px;
-  }
-  .pillar-card {
-    background: var(--bg2);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    padding: 1.6rem 1.4rem 1.4rem;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    transition: border-color 0.25s, transform 0.2s;
-    position: relative;
-    overflow: hidden;
-  }
-  .pillar-card::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; right: 0;
-    height: 2px;
-    background: linear-gradient(90deg, var(--accent), transparent);
-    opacity: 0;
-    transition: opacity 0.25s;
-  }
-  .pillar-card:hover { border-color: var(--border2); transform: translateY(-3px); }
-  .pillar-card:hover::before { opacity: 1; }
-  .pillar-card--wide {
-    grid-column: span 1;
-  }
-  .pillar-icon-wrap {
-    width: 38px; height: 38px;
-    background: var(--accent2);
-    border-radius: var(--radius-sm);
-    display: flex; align-items: center; justify-content: center;
-    flex-shrink: 0;
-  }
-  .pillar-svg {
-    width: 20px; height: 20px;
-    color: var(--accent);
-  }
-  .pillar-title {
-    font-size: 14px;
-    font-weight: 500;
-    color: var(--text);
-    line-height: 1.3;
-  }
-  .pillar-desc {
-    font-size: 12px;
-    color: var(--text2);
-    line-height: 1.7;
-    flex: 1;
-  }
-  .pillar-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 5px;
-    margin-top: 2px;
-  }
-  .pillar-tags span {
-    font-family: 'DM Mono', monospace;
-    font-size: 10px;
-    padding: 3px 8px;
-    border-radius: 4px;
-    background: var(--bg4);
-    color: var(--text3);
-    border: 1px solid var(--border);
-  }
-  @media (max-width: 700px) {
-    .pillars-grid { grid-template-columns: 1fr; }
-    .pillar-card--wide { grid-column: span 1; }
-  }
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(18px); }
-    to   { opacity: 1; transform: translateY(0); }
-  }
-  .hero-left  { animation: fadeUp 0.7s ease both; }
-  .photo-card { animation: fadeUp 0.7s 0.15s ease both; }
-  .stats      { animation: fadeUp 0.7s 0.25s ease both; }
-
-
-  .leadership-strip {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0,1fr));
-    gap: 12px;
-    margin-bottom: 4rem;
-  }
-  .lead-card {
-    background: linear-gradient(180deg, rgba(200,245,66,0.05), transparent 100%), var(--bg2);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    padding: 1.2rem 1.35rem;
-  }
-  .lead-card h4 {
-    font-size: 13px;
-    font-weight: 500;
-    color: var(--text);
-    margin-bottom: 6px;
-  }
-  .lead-card p {
-    font-size: 12px;
-    color: var(--text2);
-    line-height: 1.65;
-  }
-  .proof-line {
-    margin-top: 10px;
-    font-family: 'DM Mono', monospace;
-    font-size: 10px;
-    color: var(--accent);
-    letter-spacing: 0.04em;
-  }
-  .why-grid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0,1fr));
-    gap: 12px;
-  }
-  .why-card {
-    background: var(--bg2);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    padding: 1.35rem 1.4rem;
-  }
-  .why-card h3 {
-    font-size: 14px;
-    font-weight: 500;
-    color: var(--text);
-    margin-bottom: 8px;
-  }
-  .why-card p {
-    font-size: 12px;
-    color: var(--text2);
-    line-height: 1.7;
-  }
-  .why-card strong { color: var(--accent); font-weight: 500; }
-
-  /* RESPONSIVE */
-  @media (max-width: 700px) {
-    .hero { grid-template-columns: 1fr; }
-    .leadership-strip { grid-template-columns: 1fr; }
-    .why-grid { grid-template-columns: 1fr; }
-    .photo-frame { aspect-ratio: 1/1; max-width: 200px; }
-    .projects { grid-template-columns: 1fr; }
-    .skills-grid { grid-template-columns: 1fr; }
-    .edu-grid { grid-template-columns: 1fr; }
-    .stats { grid-template-columns: 1fr 1fr; }
-    .tl-item { grid-template-columns: 70px 1px 1fr; gap: 0 14px; }
-    .demo-header { flex-wrap: wrap; gap: 10px; }
-  }
-
-
-  /* CASE STUDY + WHY ME */
-  .case-study {
-    background: linear-gradient(180deg, rgba(200,245,66,0.08) 0%, rgba(200,245,66,0.03) 100%);
-    border: 1px solid rgba(200,245,66,0.18);
-    border-radius: var(--radius);
-    padding: 1.6rem;
-    margin-bottom: 1.2rem;
-  }
-  .case-kicker {
-    font-family: 'DM Mono', monospace;
-    font-size: 10px;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
-    color: var(--accent);
-    margin-bottom: 10px;
-  }
-  .case-study h3 {
-    font-size: 1.25rem;
-    font-weight: 500;
-    margin-bottom: 8px;
-    line-height: 1.35;
-  }
-  .case-lead {
-    color: var(--text2);
-    font-size: 14px;
-    line-height: 1.75;
-    margin-bottom: 1.2rem;
-    max-width: 760px;
-  }
-  .case-metrics {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0,1fr));
-    gap: 10px;
-    margin-bottom: 1.2rem;
-  }
-  .case-metric {
-    background: rgba(9,9,11,0.32);
-    border: 1px solid rgba(255,255,255,0.08);
-    border-radius: var(--radius-sm);
-    padding: 0.95rem 1rem;
-  }
-  .case-metric strong {
-    display: block;
-    font-family: 'DM Serif Display', serif;
-    font-size: 1.45rem;
-    line-height: 1;
-    color: var(--accent);
-    margin-bottom: 6px;
-    font-weight: 400;
-  }
-  .case-metric span {
-    display: block;
-    font-size: 11px;
-    line-height: 1.45;
-    color: var(--text3);
-  }
-  .case-grid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0,1fr));
-    gap: 10px;
-  }
-  .case-cell {
-    background: var(--bg2);
-    border: 1px solid var(--border);
-    border-radius: var(--radius-sm);
-    padding: 1rem 1rem 0.95rem;
-  }
-  .case-cell-label {
-    font-family: 'DM Mono', monospace;
-    font-size: 10px;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--text3);
-    margin-bottom: 8px;
-  }
-  .case-cell p {
-    font-size: 12px;
-    line-height: 1.7;
-    color: var(--text2);
-  }
-  .whyme-grid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0,1fr));
-    gap: 12px;
-  }
-  .whyme-card {
-    background: var(--bg2);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    padding: 1.3rem 1.25rem;
-  }
-  .whyme-card h3 {
-    font-size: 14px;
-    font-weight: 500;
-    margin-bottom: 8px;
-    color: var(--text);
-  }
-  .whyme-card p {
-    font-size: 12px;
-    line-height: 1.7;
-    color: var(--text2);
-  }
-  .impact-line {
-    font-family: 'DM Mono', monospace;
-    font-size: 10px;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--accent);
-    margin-bottom: 10px;
-  }
-  .tl-impact {
-    margin-top: 10px;
-    font-family: 'DM Mono', monospace;
-    font-size: 10px;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--accent);
-  }
-  @media (max-width: 700px) {
-    .case-metrics, .case-grid, .whyme-grid { grid-template-columns: 1fr; }
-  }
-
-
-/* HERO STATUS + BRIDGE STRIP */
-.hero-status {
-  display: inline-flex; align-items: center; gap: 10px; margin-bottom: 1.4rem;
-  font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.04em; color: var(--text2);
-  padding: 6px 14px; border: 1px solid var(--border2); border-radius: 100px; background: var(--bg2);
+/* Layout: white page with blue accents. A tinted opening band holds the headline, the photo and a "go straight to" panel; every other section is one calm block below it. */
+:root {
+  color-scheme: light;
+  --bg: #FFFFFF;
+  --tint: #EEF4FF;
+  --tint-2: #DCE8FF;
+  --ink: #0F2447;
+  --muted: #4F6486;
+  --line: #D3E0F5;
+  --blue: #1A5BD9;
+  --blue-dark: #12409E;
+  --blue-soft: #E4EDFF;
+  --on-blue: #FFFFFF;
+  --good: #137A45;
+  --bad: #B8392E;
+  --font-display: "DM Serif Display", Georgia, serif;
+  --font-body: "Outfit", "Segoe UI", system-ui, sans-serif;
+  --font-mono: "DM Mono", ui-monospace, Consolas, monospace;
 }
-.status-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 8px var(--accent); flex-shrink: 0; }
-.bridge {
-  display: grid; grid-template-columns: 1fr auto 1fr auto 1fr; gap: 12px; align-items: stretch; margin-bottom: 4rem;
-  animation: fadeUp 0.7s 0.2s ease both;
-}
-.bridge-step {
-  background: var(--bg2); border: 1px solid var(--border); border-radius: var(--radius);
-  padding: 1.2rem 1.35rem; transition: border-color 0.2s, transform 0.2s;
-}
-.bridge-step:hover { border-color: rgba(200,245,66,0.35); transform: translateY(-2px); }
-.bridge-kicker { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent); margin-bottom: 8px; }
-.bridge-step h4 { font-size: 14px; font-weight: 500; color: var(--text); margin-bottom: 6px; }
-.bridge-step p { font-size: 12px; color: var(--text2); line-height: 1.65; }
-.bridge-arrow { display: flex; align-items: center; color: var(--text3); font-family: 'DM Mono', monospace; font-size: 18px; }
-@media (max-width: 700px) {
-  nav { flex-direction: column; align-items: flex-start; gap: 12px; padding-top: 1.2rem; padding-bottom: 1.2rem; margin-bottom: 2.5rem; }
-  .nav-links { gap: 1.1rem; row-gap: 0.4rem; }
-  .bridge { grid-template-columns: 1fr; }
-  .bridge-arrow { justify-content: center; transform: rotate(90deg); height: 18px; }
-}
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 84px; }
+body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--font-body); font-size: 17px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 60; background: var(--bg); }
+a { color: var(--blue); }
+h1, h2, h3, h4 { margin: 0; font-weight: 400; }
+p { margin: 0; }
+:focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; border-radius: 4px; }
+.wrap { max-width: 1140px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
 
-/* SKILL CHIPS */
-.skill-chips { display: flex; flex-wrap: wrap; gap: 7px; }
-.skill-chip {
-  font-family: 'DM Mono', monospace; font-size: 11px; padding: 5px 12px; border-radius: 6px;
-  background: var(--bg4); color: var(--text2); border: 1px solid var(--border); transition: border-color 0.2s, color 0.2s;
+/* header */
+.top { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 50; background: rgba(255,255,255,0.94); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
+.top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 10px 24px; flex-wrap: wrap; padding-block: 12px; }
+.brand { text-decoration: none; color: var(--ink); line-height: 1.2; }
+.brand b { font-family: var(--font-display); font-weight: 400; font-size: 1.3rem; display: block; }
+.brand span { font-size: 0.78rem; color: var(--muted); }
+.nav { display: flex; align-items: center; gap: 6px 20px; flex-wrap: wrap; font-size: 0.93rem; }
+.nav a { color: var(--muted); text-decoration: none; }
+.nav a:hover { color: var(--blue); }
+.nav a.cta { color: var(--on-blue); background: var(--blue); padding: 8px 16px; border-radius: 8px; font-weight: 500; }
+.nav a.cta:hover { background: var(--blue-dark); color: var(--on-blue); }
+
+/* buttons */
+.btn { display: inline-block; padding: 12px 22px; border-radius: 9px; font-weight: 500; font-size: 0.96rem; text-decoration: none; border: 1px solid var(--line); background: var(--bg); color: var(--ink); }
+.btn:hover { border-color: var(--blue); color: var(--blue); }
+.btn.primary { background: var(--blue); border-color: var(--blue); color: var(--on-blue); }
+.btn.primary:hover { background: var(--blue-dark); border-color: var(--blue-dark); color: var(--on-blue); }
+.btn.small { padding: 7px 14px; font-size: 0.86rem; border-radius: 7px; }
+.btn.small.fill { background: var(--blue-soft); border-color: var(--blue-soft); color: var(--blue-dark); }
+.btn.small.fill:hover { background: var(--tint-2); border-color: var(--tint-2); }
+.note { font-size: 0.85rem; color: var(--muted); }
+
+/* opening band */
+.open { background: var(--tint); border-bottom: 1px solid var(--line); padding-block: clamp(24px, 3.5vw, 44px) clamp(28px, 4vw, 48px); }
+.hero { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.75fr); gap: clamp(28px, 5vw, 64px); align-items: center; }
+.tag { font-family: var(--font-mono); font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--blue); margin-bottom: 16px; }
+.hero h1 { font-family: var(--font-display); font-size: clamp(2.2rem, 4.8vw, 3.6rem); line-height: 1.08; letter-spacing: -0.01em; text-wrap: balance; margin-bottom: 20px; }
+.hero .lead { color: var(--muted); font-size: 1.06rem; max-width: 36em; margin-bottom: 22px; font-weight: 300; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 26px; }
+.chip { font-family: var(--font-mono); font-size: 0.78rem; padding: 5px 12px; border-radius: 100px; background: var(--bg); border: 1px solid var(--line); color: var(--muted); }
+.actions { display: flex; flex-wrap: wrap; gap: 12px; }
+
+.who { display: grid; gap: 14px; min-width: 0; }
+.photo { width: 100%; aspect-ratio: 4 / 5; max-height: 330px; border-radius: 16px; overflow: hidden; border: 1px solid var(--line); background: var(--tint-2); box-shadow: 0 20px 40px -26px rgba(18, 64, 158, 0.55); }
+.photo img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: 72% 30%; }
+.who-card { background: var(--bg); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; }
+.who-card b { display: block; font-weight: 500; }
+.who-card span { display: block; font-size: 0.86rem; color: var(--muted); }
+.who-card p { font-size: 0.9rem; color: var(--muted); margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--line); }
+
+/* quick access */
+.go { margin-top: clamp(28px, 4vw, 44px); }
+.go h2 { font-family: var(--font-display); font-size: clamp(1.4rem, 2.6vw, 1.9rem); margin-bottom: 4px; }
+.go > p { color: var(--muted); margin-bottom: 16px; }
+.tiles { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.tile { position: relative; display: block; background: var(--bg); border: 1px solid var(--line); border-radius: 12px; padding: 16px 44px 16px 18px; text-decoration: none; color: var(--ink); transition: border-color 0.15s, transform 0.15s, box-shadow 0.15s; }
+.tile:hover { border-color: var(--blue); transform: translateY(-2px); box-shadow: 0 12px 24px -18px rgba(18, 64, 158, 0.6); }
+.tile b { display: block; font-weight: 500; font-size: 1.02rem; }
+.tile span { display: block; font-size: 0.86rem; color: var(--muted); line-height: 1.4; margin-top: 2px; }
+.tile::after { content: ""; position: absolute; right: 18px; top: 50%; width: 9px; height: 9px; border-top: 2px solid var(--blue); border-right: 2px solid var(--blue); transform: translateY(-50%) rotate(45deg); }
+.tile.ext::after { transform: translateY(-50%) rotate(0deg); }
+.tile.main { background: var(--blue); border-color: var(--blue); color: var(--on-blue); }
+.tile.main span { color: #D5E3FF; }
+.tile.main::after { border-color: #fff; }
+
+/* stats */
+.stats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; padding-block: clamp(28px, 4vw, 44px) 0; }
+.stat { background: var(--bg); border: 1px solid var(--line); border-radius: 12px; padding: 18px 20px; }
+.stat .n { font-family: var(--font-display); font-size: clamp(1.9rem, 3.4vw, 2.5rem); line-height: 1; color: var(--blue); display: block; margin-bottom: 6px; }
+.stat .l { font-size: 0.86rem; color: var(--muted); line-height: 1.4; }
+
+/* sections */
+section { padding-top: clamp(44px, 6vw, 80px); }
+.sh { display: flex; align-items: baseline; justify-content: space-between; gap: 8px 24px; flex-wrap: wrap; margin-bottom: 22px; padding-bottom: 12px; border-bottom: 2px solid var(--blue-soft); }
+.sh h2 { font-family: var(--font-display); font-size: clamp(1.7rem, 3vw, 2.3rem); line-height: 1.1; }
+.sh p { color: var(--muted); font-size: 0.95rem; }
+.back { font-size: 0.85rem; color: var(--muted); text-decoration: none; font-family: var(--font-mono); }
+.back:hover { color: var(--blue); }
+
+.grid3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+.card { background: var(--bg); border: 1px solid var(--line); border-radius: 12px; padding: 20px; display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+.card h3 { font-family: var(--font-body); font-weight: 500; font-size: 1.05rem; }
+.card p { font-size: 0.93rem; color: var(--muted); }
+.card.feat { background: var(--tint); border-color: var(--tint-2); }
+.card .impact { font-family: var(--font-mono); font-size: 0.78rem; color: var(--blue-dark); }
+.card .impact b { color: var(--ink); font-weight: 500; }
+.card .foot { margin-top: auto; padding-top: 10px; display: flex; flex-direction: column; gap: 10px; }
+.tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.tags span { font-family: var(--font-mono); font-size: 0.72rem; padding: 3px 9px; border-radius: 5px; background: var(--blue-soft); color: var(--blue-dark); }
+.badge { align-self: flex-start; font-family: var(--font-mono); font-size: 0.72rem; padding: 2px 9px; border-radius: 5px; background: var(--blue); color: var(--on-blue); }
+
+/* case study */
+.case { background: var(--tint); border: 1px solid var(--tint-2); border-radius: 16px; padding: clamp(20px, 3vw, 32px); }
+.case h3 { font-family: var(--font-display); font-size: clamp(1.4rem, 2.6vw, 1.9rem); line-height: 1.2; margin-bottom: 10px; }
+.case .lead { color: var(--muted); max-width: 52em; margin-bottom: 20px; }
+.metrics { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-bottom: 14px; }
+.metric { background: var(--bg); border: 1px solid var(--line); border-radius: 10px; padding: 16px; }
+.metric b { display: block; font-family: var(--font-display); font-weight: 400; font-size: 1.7rem; color: var(--blue); line-height: 1.1; margin-bottom: 6px; }
+.metric span { font-size: 0.86rem; color: var(--muted); display: block; line-height: 1.45; }
+.cells { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.cell { background: var(--bg); border: 1px solid var(--line); border-radius: 10px; padding: 16px; }
+.cell h4 { font-family: var(--font-mono); font-size: 0.74rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--blue); margin-bottom: 6px; }
+.cell p { font-size: 0.92rem; color: var(--muted); }
+
+/* experience */
+.now { background: var(--blue); color: var(--on-blue); border-radius: 14px; padding: clamp(18px, 3vw, 28px); margin-bottom: 20px; display: grid; gap: 8px; }
+.now h3 { font-family: var(--font-body); font-weight: 500; font-size: 1.15rem; }
+.now p { color: #DCE8FF; font-size: 0.97rem; }
+.now p strong { color: #fff; font-weight: 500; }
+.now .tags span { background: rgba(255,255,255,0.16); color: #fff; }
+.tl { display: grid; }
+.tl-item { display: grid; grid-template-columns: 11em minmax(0, 1fr); gap: 4px 28px; padding: 20px 0; border-bottom: 1px solid var(--line); }
+.tl-item:first-child { border-top: 1px solid var(--line); }
+.when { font-family: var(--font-mono); font-size: 0.8rem; color: var(--muted); padding-top: 4px; }
+.tl-item h3 { font-family: var(--font-body); font-weight: 500; font-size: 1.1rem; }
+.where { font-size: 0.9rem; color: var(--blue); font-weight: 500; margin-bottom: 4px; }
+.tl-item p { color: var(--muted); font-size: 0.95rem; }
+.tl-item ul { margin: 8px 0 0; padding-left: 1.1em; color: var(--muted); font-size: 0.93rem; display: grid; gap: 4px; }
+.tl-item li::marker { color: var(--blue); }
+.tl-item .tags { margin-top: 10px; }
+
+/* skills, education */
+.skillgrid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.skill { background: var(--bg); border: 1px solid var(--line); border-radius: 12px; padding: 18px 20px; }
+.skill.wide { grid-column: 1 / -1; background: var(--tint); border-color: var(--tint-2); }
+.skill h3 { font-family: var(--font-mono); font-size: 0.76rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--blue-dark); margin-bottom: 12px; }
+.skill .tags span { font-size: 0.8rem; padding: 4px 11px; background: var(--bg); border: 1px solid var(--line); color: var(--ink); }
+.skill.wide .tags span { background: var(--bg); border-color: var(--tint-2); }
+.edugrid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.edu { background: var(--bg); border: 1px solid var(--line); border-radius: 12px; padding: 18px 20px; }
+.edu.wide { grid-column: 1 / -1; background: var(--tint); border-color: var(--tint-2); }
+.edu b { display: block; font-weight: 500; }
+.edu .s { color: var(--blue); font-size: 0.9rem; font-weight: 500; }
+.edu .y { color: var(--muted); font-size: 0.84rem; font-family: var(--font-mono); }
+.certs { margin-top: 22px; display: grid; gap: 8px; }
+.certs h3 { font-family: var(--font-body); font-weight: 500; font-size: 1rem; margin-bottom: 4px; }
+.cert { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 16px; padding: 10px 14px; border: 1px solid var(--line); border-radius: 9px; font-size: 0.92rem; }
+.cert span:last-child { font-family: var(--font-mono); font-size: 0.78rem; color: var(--muted); }
+
+/* why me */
+.why p { font-size: 0.93rem; color: var(--muted); }
+.why strong { color: var(--ink); font-weight: 500; }
+
+/* contact */
+.contact { padding-bottom: clamp(48px, 7vw, 90px); }
+.contact-box { background: var(--blue); color: var(--on-blue); border-radius: 18px; padding: clamp(24px, 4vw, 44px); display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 24px 40px; align-items: center; }
+.contact-box h2 { font-family: var(--font-display); font-size: clamp(1.7rem, 3vw, 2.4rem); line-height: 1.1; margin-bottom: 10px; }
+.contact-box p { color: #DCE8FF; }
+.links { display: grid; gap: 10px; }
+.links a, .links .mail { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 13px 16px; border-radius: 10px; background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.28); color: #fff; text-decoration: none; font-weight: 500; overflow-wrap: anywhere; }
+.links a:hover { background: #fff; color: var(--blue-dark); }
+.links a span { font-family: var(--font-mono); font-size: 0.85rem; font-weight: 400; }
+.page-foot { border-top: 1px solid var(--line); padding-block: 22px; color: var(--muted); font-size: 0.85rem; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; }
+
+
+/* video dialog */
+dialog.video { border: 0; padding: 0; border-radius: 14px; width: min(960px, calc(100vw - 32px)); background: #0F2447; color: #fff; overflow: hidden; }
+dialog.video::backdrop { background: rgba(15, 36, 71, 0.74); }
+.v-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 16px; }
+.v-head b { font-weight: 500; }
+.v-close { font: inherit; font-size: 0.9rem; padding: 6px 14px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.35); background: transparent; color: #fff; cursor: pointer; }
+.v-close:hover { background: #fff; color: #0F2447; }
+.v-frame { aspect-ratio: 16 / 9; background: #000; }
+.v-frame iframe { display: block; width: 100%; height: 100%; border: 0; }
+.v-foot { padding: 10px 16px; font-size: 0.85rem; color: #C9DBFF; }
+.v-foot a { color: #fff; }
+
+@media (max-width: 960px) {
+  .hero, .contact-box { grid-template-columns: minmax(0, 1fr); }
+  .tiles, .grid3, .metrics, .cells { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .photo { max-height: 380px; aspect-ratio: 5 / 4; }
 }
-.skill-chip:hover { border-color: var(--accent); color: var(--accent); }
-.skill-chip.core { color: var(--text); border-color: var(--border2); }
-.edu-card.edu-wide { grid-column: 1 / -1; border-color: rgba(200,245,66,0.25); background: var(--accent3); }
-.edu-note { font-size: 12px; color: var(--text2); margin-top: 6px; line-height: 1.6; }
+@media (max-width: 640px) {
+  .tiles, .grid3, .metrics, .cells, .skillgrid, .edugrid { grid-template-columns: minmax(0, 1fr); }
+  .tl-item { grid-template-columns: minmax(0, 1fr); }
+  .nav { order: 3; width: 100%; flex-wrap: nowrap; overflow-x: auto; white-space: nowrap; gap: 18px; padding-bottom: 4px; }
+  .photo { aspect-ratio: 1 / 1; max-height: none; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .tile { transition: none; } }
 </style>
 </head>
 <body>
 
-<div class="glow-orb"></div>
-<div class="glow-orb2"></div>
 
-<div class="page">
-
-  <!-- NAV -->
-  <nav>
-    <div class="nav-logo"><strong>Juan Oliván</strong> · portfolio</div>
-    <ul class="nav-links">
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#demos">Demos</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#education">Education</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#contact">Contact</a></li>
-      <li><a href="https://github.com/Jhon2704" target="_blank" rel="noopener">GitHub ↗</a></li>
-    </ul>
-  </nav>
-
-  <!-- HERO + PHOTO -->
-  <div class="hero">
-    <div class="hero-left">
-      <div class="hero-tag">Computer Vision · Multi-agent LLM systems · GxP</div>
-      <h1>AI that holds up<br>in <em>regulated</em><br><em>production</em>.</h1>
-      <p class="hero-desc">
-        Senior Computer Vision &amp; AI Engineer with 7+ years deploying vision systems in pharmaceutical manufacturing.
-        Now building auditable LLM multi-agent pipelines (LangGraph, RAG, FastAPI) for GxP and 21 CFR Part 11 environments.
-        PhD candidate researching LLM-based generation of GxP verification documentation.
-      </p>
-      <div class="hero-status"><span class="status-dot"></span>Technical Referent · ALTEN Spain → Grifols · Barcelona</div>
-      <div class="hero-chips">
-        <span class="chip">Industrial Computer Vision</span>
-        <span class="chip">Multi-agent LLMs · LangGraph</span>
-        <span class="chip">GxP · 21 CFR Part 11</span>
-        <span class="chip">Cognex · Deep Learning</span>
-        <span class="chip">RAG · FastAPI · Local LLMs</span>
-      </div>
-      <div class="hero-ctas">
-        <a href="#case-study" class="btn-primary">See flagship case →</a>
-        <a href="#demos" class="btn-secondary">Watch TRACER demo</a>
-        <a href="#contact" class="btn-secondary">Contact</a>
-      </div>
-    </div>
-
-    <div class="photo-card">
-      <div class="photo-frame">
-        <img id="photoImg" src="mi_foto.png" alt="Juan Oliván" style="display:block;">
-      </div>
-
-      <div class="photo-bio">
-        <div class="bio-label">Positioning</div>
-        <p class="bio-text">I work where industrial computer vision, validation discipline and generative AI meet. What makes systems usable in regulated environments is integration, robustness, evidence, documentation and operational trust, and I now extend that to LLM pipelines that generate and trace GxP documentation.</p>
-      </div>
-    </div>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top"><b>Juan Oliván</b><span>Computer Vision &amp; AI Engineer</span></a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#case">Case study</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#education">Education</a>
+      <a class="cta" href="#contact">Contact</a>
+    </nav>
   </div>
+</header>
 
-  <!-- BRIDGE STRIP -->
-  <div class="bridge">
-    <div class="bridge-step">
-      <div class="bridge-kicker">01 · Perceive</div>
-      <h4>Industrial Computer Vision</h4>
-      <p>Cognex, YOLO, U-Net and deep-learning inspection running on live pharmaceutical lines.</p>
-    </div>
-    <div class="bridge-arrow">→</div>
-    <div class="bridge-step">
-      <div class="bridge-kicker">02 · Reason</div>
-      <h4>Multi-agent LLM pipelines</h4>
-      <p>LangGraph, RAG and FastAPI, local-first where data cannot leave the site.</p>
-    </div>
-    <div class="bridge-arrow">→</div>
-    <div class="bridge-step">
-      <div class="bridge-kicker">03 · Prove</div>
-      <h4>Auditable GxP evidence</h4>
-      <p>Traceability and verification documentation under 21 CFR Part 11.</p>
-    </div>
-  </div>
-
-  <!-- STATS -->
-  <div class="stats">
-    <div class="stat-card">
-      <div class="stat-num">7<span>+</span></div>
-      <div class="stat-label">years in industrial Computer Vision</div>
-    </div>
-    <div class="stat-card">
-      <div class="stat-num">30<span>+</span></div>
-      <div class="stat-label">CV &amp; AI projects delivered across my career</div>
-    </div>
-    <div class="stat-card">
-      <div class="stat-num">0.09<span>%</span></div>
-      <div class="stat-label">label-inspection reject rate, down from 0.78%</div>
-    </div>
-    <div class="stat-card">
-      <div class="stat-num">PhD</div>
-      <div class="stat-label">candidate · plus MSc and MBA in AI &amp; Data</div>
-    </div>
-  </div>
-
-  <!-- WHAT I DO -->
-  <div class="section" id="whatido">
-    <div class="section-header"><h2>What I do</h2></div>
-    <div class="pillars-grid">
-
-      <div class="pillar-card">
-        <div class="pillar-icon-wrap">
-          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="pillar-svg">
-            <circle cx="20" cy="20" r="8" stroke="currentColor" stroke-width="1.5"/>
-            <circle cx="20" cy="20" r="3" fill="currentColor"/>
-            <path d="M20 4v4M20 32v4M4 20h4M32 20h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-            <path d="M8.7 8.7l2.8 2.8M28.5 28.5l2.8 2.8M31.3 8.7l-2.8 2.8M11.5 28.5l-2.8 2.8" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
-          </svg>
-        </div>
-        <h3 class="pillar-title">Computer Vision</h3>
-        <p class="pillar-desc">End-to-end CV pipelines for industrial production lines — detection, segmentation, OCR and quality control across pharma, packaging and manufacturing.</p>
-        <div class="pillar-tags">
-          <span>YOLO</span><span>U-Net</span><span>OpenCV</span><span>ONNX</span>
-        </div>
-      </div>
-
-      <div class="pillar-card">
-        <div class="pillar-icon-wrap">
-          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="pillar-svg">
-            <rect x="6" y="10" width="28" height="20" rx="3" stroke="currentColor" stroke-width="1.5"/>
-            <path d="M13 20h4l3-5 4 10 3-5h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </div>
-        <h3 class="pillar-title">Cognex Ecosystem</h3>
-        <p class="pillar-desc">Expert across the full Cognex stack — In-Sight Explorer, VisionPro, ViDi deep learning, 3D vision and Vision Suite — deployed in regulated pharma environments.</p>
-        <div class="pillar-tags">
-          <span>In-Sight</span><span>VisionPro</span><span>ViDi</span><span>3D</span>
-        </div>
-      </div>
-
-      <div class="pillar-card">
-        <div class="pillar-icon-wrap">
-          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="pillar-svg">
-            <path d="M8 28l8-8 5 5 11-13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-            <rect x="4" y="4" width="10" height="10" rx="2" stroke="currentColor" stroke-width="1.5"/>
-            <rect x="26" y="4" width="10" height="10" rx="2" stroke="currentColor" stroke-width="1.5"/>
-            <rect x="26" y="26" width="10" height="10" rx="2" stroke="currentColor" stroke-width="1.5"/>
-            <rect x="4" y="26" width="10" height="10" rx="2" stroke="currentColor" stroke-width="1.5"/>
-          </svg>
-        </div>
-        <h3 class="pillar-title">Deep Learning from scratch</h3>
-        <p class="pillar-desc">Custom neural network architectures built from the ground up. Designed a ResNet-style CNN for gaze estimation reaching 97% accuracy.</p>
-        <div class="pillar-tags">
-          <span>Keras</span><span>PyTorch</span><span>ResNet</span><span>HuggingFace</span>
-        </div>
-      </div>
-
-      <div class="pillar-card">
-        <div class="pillar-icon-wrap">
-          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="pillar-svg">
-            <path d="M10 30V18l10-8 10 8v12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-            <rect x="15" y="22" width="10" height="8" rx="1" stroke="currentColor" stroke-width="1.5"/>
-            <path d="M6 18l14-12 14 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </div>
-        <h3 class="pillar-title">Generative AI & Local LLMs</h3>
-        <p class="pillar-desc">Fully offline generative AI solutions — RAG pipelines, document assistants and intelligent agents using Ollama, Mistral and phi3. No cloud, no data exposure.</p>
-        <div class="pillar-tags">
-          <span>Ollama</span><span>RAG</span><span>LangChain</span><span>ChromaDB</span>
-        </div>
-      </div>
-
-      <div class="pillar-card">
-        <div class="pillar-icon-wrap">
-          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="pillar-svg">
-            <path d="M12 28V16M18 28V20M24 28V12M30 28V22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-            <path d="M8 32h24" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-          </svg>
-        </div>
-        <h3 class="pillar-title">GxP Doc Automation</h3>
-        <p class="pillar-desc">Multi-agent LLM pipelines (LangGraph) that automate regulated documentation: SRS, DS, SDS, verification test cases and traceability matrices. GxP compliance knowledge combined with generative AI engineering.</p>
-        <div class="pillar-tags">
-          <span>TRACER</span><span>LangGraph</span><span>Multi-agent</span><span>GxP</span><span>python-docx</span>
-        </div>
-      </div>
-
-      <div class="pillar-card">
-        <div class="pillar-icon-wrap">
-          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="pillar-svg">
-            <path d="M20 6l3.5 7 7.5 1.1-5.5 5.3 1.3 7.6L20 23.5l-6.8 3.5 1.3-7.6L9 14.1l7.5-1.1L20 6z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
-            <path d="M12 32h16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-            <path d="M16 36h8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-          </svg>
-        </div>
-        <h3 class="pillar-title">GxP Validation & Test Eng.</h3>
-        <p class="pillar-desc">Pharmaceutical-grade test planning and system validation — from requirements gathering through OQ/PQ execution, using Jama and Jira in GMP-regulated environments.</p>
-        <div class="pillar-tags">
-          <span>GMP</span><span>OQ/PQ</span><span>Jama</span><span>Jira</span>
-        </div>
-      </div>
-
-      <div class="pillar-card pillar-card--wide">
-        <div class="pillar-icon-wrap">
-          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="pillar-svg">
-            <circle cx="20" cy="12" r="5" stroke="currentColor" stroke-width="1.5"/>
-            <circle cx="8" cy="30" r="4" stroke="currentColor" stroke-width="1.5"/>
-            <circle cx="32" cy="30" r="4" stroke="currentColor" stroke-width="1.5"/>
-            <path d="M20 17v4M20 21l-9 6M20 21l9 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-          </svg>
-        </div>
-        <h3 class="pillar-title">Technical Referent & Mentor</h3>
-        <p class="pillar-desc">Acting technical reference within the Manufacturing Engineering department — defining best practices, technical roadmap and onboarding junior engineers. Bridging deep technical expertise with strategic vision and delivery ownership.</p>
-        <div class="pillar-tags">
-          <span>Leadership</span><span>Mentoring</span><span>Roadmap</span><span>Manufacturing Eng.</span><span>Delivery ownership</span>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-  <!-- CURRENT ROLE BANNER -->
-  <div class="section" id="projects">
-    <div class="section-header"><h2>Current role</h2></div>
-    <div class="role-banner">
-      <div class="role-banner-icon">🏭</div>
-      <div class="role-banner-text">
-        <h4>Technical Referent · Computer Vision &amp; AI — ALTEN Spain</h4>
-        <p>
-          Acting as the go-to technical reference for Computer Vision initiatives in <strong>Manufacturing Engineering</strong> within a GxP pharmaceutical environment.
-          Responsible for validated CV delivery, test strategy in Jama &amp; Jira, and cross-functional collaboration with automation, quality and compliance teams.
-          Combining <strong>Cognex expertise</strong>, deep learning and <strong>LLM multi-agent pipelines</strong> (LangGraph, RAG, local models) to solve production and documentation challenges under real industrial constraints.
-        </p>
-        <span class="role-tag">Technical Referent · Manufacturing Engineering · Computer Vision · Local AI · GMP · Jama / Jira</span>
-      </div>
-    </div>
-
-
-
-  <!-- SELECTED CASE STUDY -->
-  <div class="section" id="case-study">
-    <div class="section-header"><h2>Selected Case Study</h2></div>
-    <div class="case-study">
-      <div class="case-kicker">Industrial impact snapshot</div>
-      <h3>Industrial label inspection optimization for regulated production</h3>
-      <p class="case-lead">Improved an industrial visual inspection workflow by redesigning the inspection strategy around non-critical masking and retraining. The goal was not only better model accuracy, but a lower reject rate under real production constraints and a validation-friendly deployment approach.</p>
-      <div class="case-metrics">
-        <div class="case-metric">
-          <strong>0.78% → 0.09%</strong>
-          <span>Reject rate reduction after masking strategy and retraining in production-oriented evaluation.</span>
-        </div>
-        <div class="case-metric">
-          <strong>8.6× lower</strong>
-          <span>Relative reject-rate improvement while preserving focus on true defects.</span>
-        </div>
-        <div class="case-metric">
-          <strong>ROC + confusion matrix</strong>
-          <span>Evidence used to justify the change; approach designed for regulated environments where traceability and deployment discipline matter.</span>
-        </div>
-      </div>
-      <div class="case-grid">
-        <div class="case-cell">
-          <div class="case-cell-label">Problem</div>
-          <p>The initial inspection setup generated unnecessary rejects because non-critical zones were influencing the decision boundary in a real manufacturing scenario.</p>
-        </div>
-        <div class="case-cell">
-          <div class="case-cell-label">Solution</div>
-          <p>Applied masking on non-critical regions, retrained the model and re-evaluated the system with production-oriented evidence, including ROC and confusion-matrix based reasoning.</p>
-        </div>
-        <div class="case-cell">
-          <div class="case-cell-label">Why it matters</div>
-          <p>Not just building a model, but adapting it to industrial reality, reducing operational friction and making it deployable.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- PROJECTS -->
-    <div class="section-header" style="margin-top:2.5rem;"><h2>Projects</h2></div>
-    <div class="projects">
-
-      <!-- TRACER — featured -->
-      <div class="project-card featured">
-        <span class="project-featured-badge">★ latest build</span>
-        <div class="project-icon" style="background:rgba(200,245,66,0.12);">🔬</div>
-        <h3>TRACER</h3>
-        <div class="impact-line"><strong>Fully local workflow</strong> · regulatory documentation automation for sensitive environments</div>
-        <p>Traceability &amp; Compliance Engine for Regulated Software. Multi-agent pipeline (LangGraph) that derives the GxP documentation chain (URS → SRS → DS → SDS → MSDS) and verification test cases with end-to-end traceability. Local-first and auditable. Basis of my PhD research.</p>
-        <div class="project-tags">
-          <span class="ptag">LangGraph</span><span class="ptag">Python</span><span class="ptag">Streamlit</span><span class="ptag">Ollama</span><span class="ptag">ChromaDB</span><span class="ptag">GxP</span>
-        </div>
-      </div>
-
-      <!-- Eye Tracking TFM -->
-      <div class="project-card featured">
-        <span class="project-featured-badge">★ MSc thesis</span>
-        <div class="project-icon" style="background:rgba(100,150,255,0.12);">👁️</div>
-        <h3>Eye Tracking in Online Education</h3>
-        <div class="impact-line"><strong>97% accuracy</strong> · custom CNN built from scratch for real-time gaze estimation</div>
-        <p>Real-time gaze direction estimation using only a standard webcam. Built a <strong>custom CNN with ResNet-style residual blocks</strong>, combined with MediaPipe facial landmarks and EAR blink detection, trained on real and GAN-generated synthetic data. Privacy-first, no biometric storage, GDPR-compliant.</p>
-        <div class="project-tags">
-          <span class="ptag">Custom CNN</span><span class="ptag">ResNet blocks</span><span class="ptag">MediaPipe</span><span class="ptag">Keras</span><span class="ptag">OpenCV</span><span class="ptag">GAN data</span><span class="ptag">Tkinter</span>
-        </div>
-      </div>
-
-      <!-- Syringe Dosage -->
-      <div class="project-card">
-        <div class="project-icon" style="background:rgba(200,245,66,0.10);">💉</div>
-        <h3>Syringe Dosage Analysis</h3>
-        <div class="impact-line"><strong>2 approaches benchmarked</strong> · industrial CV comparison under deployment constraints</div>
-        <p>Real-time dosage analysis of pharmaceutical syringes on an industrial line. Implemented and benchmarked Cognex ViDi against a custom YOLO v8 + U-Net + OCR pipeline, comparing accuracy, speed and deployment flexibility. Includes an <strong>on-device AI assistant</strong> for report generation and technical Q&amp;A — fully offline and GMP-aligned.</p>
-        <div class="project-tags">
-          <span class="ptag">Cognex ViDi</span><span class="ptag">YOLO v8</span><span class="ptag">U-Net</span><span class="ptag">ONNX</span><span class="ptag">phi3:mini</span><span class="ptag">Ollama</span><span class="ptag">GMP</span>
-        </div>
-      </div>
-
-      <!-- LegalSearch -->
-      <div class="project-card">
-        <div class="project-icon" style="background:rgba(100,150,255,0.10);">📄</div>
-        <h3>LegalSearch Offline</h3>
-        <div class="impact-line"><strong>Zero cloud dependency</strong> · semantic search with private local deployment</div>
-        <p>Local RAG desktop app for small law firms. Semantic search across legal documents with zero data leaving the machine, packaged with a Qt desktop frontend and PyInstaller distribution for practical adoption.</p>
-        <div class="project-tags">
-          <span class="ptag">Ollama</span><span class="ptag">ChromaDB</span><span class="ptag">PySide6</span><span class="ptag">LangChain</span><span class="ptag">PyInstaller</span>
-        </div>
-      </div>
-
-      <!-- MSDS Generator -->
-      <div class="project-card">
-        <div class="project-icon" style="background:rgba(255,160,80,0.10);">📋</div>
-        <h3>MSDS Generator</h3>
-        <div class="impact-line"><strong>Local document generation</strong> · sensitive pharma documentation without cloud APIs</div>
-        <p>Converts SDS documents from Jama Connect into Word-format MSDS outputs using local Mistral 7B, reducing reliance on cloud tooling for sensitive pharmaceutical documentation workflows.</p>
-        <div class="project-tags">
-          <span class="ptag">Mistral 7B</span><span class="ptag">Ollama</span><span class="ptag">python-docx</span><span class="ptag">Jama</span><span class="ptag">GxP</span>
-        </div>
-      </div>
-
-      <!-- AI Document Assistant (generic, no client name) -->
-      <div class="project-card">
-        <div class="project-icon" style="background:rgba(255,80,120,0.10);">🗂️</div>
-        <h3>AI Document Assistant</h3>
-        <div class="impact-line"><strong>On-prem document Q&amp;A</strong> · regulated knowledge access without data exposure</div>
-        <p>Local RAG assistant for regulated-industry document management. Semantic search and Q&amp;A over technical specifications, validation protocols and requirement documents with all data kept on-premises.</p>
-        <div class="project-tags">
-          <span class="ptag">FastAPI</span><span class="ptag">RAG</span><span class="ptag">ChromaDB</span><span class="ptag">Ollama</span><span class="ptag">Mistral 7B</span><span class="ptag">GxP</span>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-  <!-- VIDEO DEMOS -->
-  <div class="section" id="demos">
-    <div class="section-header"><h2>Video Demos</h2></div>
-
-
-
-    <div class="demo-list">
-
-      <div class="demo-item" id="demo1">
-        <div class="demo-header" onclick="toggleDemo('demo1')">
-          <span class="demo-num">01</span>
-          <div class="demo-meta">
-            <div class="demo-title">Eye tracking — real-time gaze detection (MSc thesis)</div>
-            <div class="demo-sub">Custom CNN 97% accuracy · MediaPipe · Tkinter UI · webcam only</div>
-            <div class="demo-badges">
-              <span class="demo-badge">CNN</span>
-              <span class="demo-badge">MediaPipe</span>
-              <span class="demo-badge">Keras</span>
-              <span class="demo-badge">OpenCV</span>
-            </div>
+<main id="top">
+  <div class="open">
+    <div class="wrap">
+      <div class="hero">
+        <div>
+          <div class="tag">Computer Vision Engineer · AI Systems · Technical Leadership</div>
+          <h1>Industrial AI systems built for production, validation and scale.</h1>
+          <p class="lead">Senior Computer Vision &amp; AI Engineer with 7+ years building and deploying machine vision systems in pharmaceutical and industrial environments. I bridge hands-on delivery with technical leadership: inspection systems, validation-aware software, local GenAI workflows and solution architecture that can survive real production constraints.</p>
+          <div class="chips">
+            <span class="chip">Industrial Computer Vision</span>
+            <span class="chip">Technical Leadership</span>
+            <span class="chip">Pharma · GMP · Validation</span>
+            <span class="chip">Cognex · Deep Learning</span>
+            <span class="chip">Agent Orchestration · Multi-Agent · LangGraph</span>
+            <span class="chip">Orchestrator + Subagents · MCP · Agent Memory</span>
+            <span class="chip">Local LLMs · Ollama · Mistral</span>
+            <span class="chip">RAG · ChromaDB · LangSmith</span>
+            <span class="chip">Fine-tuning · QLoRA · Quantization</span>
+            <span class="chip">LLM serving · vLLM</span>
+            <span class="chip">FastAPI · Docker · PostgreSQL</span>
+            <span class="chip">GxP · 21 CFR Part 11</span>
+            <span class="chip">AI-assisted dev · Claude Code · Copilot</span>
           </div>
-          <button class="demo-toggle" id="btn1">Watch demo <span class="arrow">▼</span></button>
+          <div class="actions">
+            <a class="btn primary" href="#case">See flagship case</a>
+            <a class="btn" href="#contact">Contact</a>
+          </div>
         </div>
-        <div class="demo-body" id="body1">
-          <div class="demo-player">
-            <div class="video-placeholder" id="vp1">
-              <iframe loading="lazy"
-                width="100%"
-                height="315"
-                src="https://www.youtube.com/embed/2eXHXOJ3FP0"
-                title="Eye tracking demo"
-                frameborder="0"
-                allowfullscreen>
-              </iframe>
-            </div>
+        <div class="who">
+          <div class="photo"><img src="mi_foto.png" alt="Juan Oliván" width="640" height="800"></div>
+          <div class="who-card">
+            <b>Juan Oliván</b>
+            <span>Technical Referent, Computer Vision &amp; AI · ALTEN Spain · Barcelona</span>
+            <p>I work at the intersection of industrial computer vision, validation discipline and practical AI adoption. Beyond model building, I focus on what makes systems usable in the real world: integration, robustness, evidence, documentation and operational trust.</p>
           </div>
         </div>
       </div>
 
-      <div class="demo-item" id="demo2">
-        <div class="demo-header" onclick="toggleDemo('demo2')">
-          <span class="demo-num">02</span>
-          <div class="demo-meta">
-            <div class="demo-title">TRACER — GxP documentation AI agent</div>
-            <div class="demo-sub">100% local · Mistral 7B · ChromaDB · Game Boy UI</div>
-            <div class="demo-badges">
-              <span class="demo-badge">LangGraph</span>
-              <span class="demo-badge">Streamlit</span>
-              <span class="demo-badge">Ollama</span>
-              <span class="demo-badge">Mistral 7B</span>
-              <span class="demo-badge">GxP</span>
-            </div>
-          </div>
-          <button class="demo-toggle" id="btn2">Watch demo <span class="arrow">▼</span></button>
+      <div class="go" id="go">
+        <h2>Where would you like to go?</h2>
+        <p>Pick what you came for.</p>
+        <div class="tiles">
+          <a class="tile main" href="#case"><b>Flagship case study</b><span>Label inspection: reject rate from 0.78% to 0.09%</span></a>
+          <a class="tile" href="#projects"><b>Projects and video demos</b><span>TRACER, eye tracking, syringe dosage, LegalSearch, MSDS</span></a>
+          <a class="tile" href="#experience"><b>Experience</b><span>ALTEN Spain · Grifols, BERICAP, BCNVision, RC Electrónica</span></a>
+          <a class="tile" href="#skills"><b>Skills and stack</b><span>Cognex, deep learning, local GenAI, GxP validation</span></a>
+          <a class="tile" href="#education"><b>Education</b><span>PhD in progress, MBA, MSc, Telecommunications Engineering</span></a>
+          <a class="tile" href="#why"><b>Why work with me</b><span>Industrial depth, validation discipline, technical ownership</span></a>
+          <a class="tile ext" href="https://www.linkedin.com/in/juan-oli%C3%A1n-9a3210176/" target="_blank" rel="noopener"><b>LinkedIn</b><span>Profile and contact</span></a>
+          <a class="tile ext" href="https://github.com/Jhon2704" target="_blank" rel="noopener"><b>GitHub</b><span>Code and Generative AI projects</span></a>
+          <a class="tile" href="#contact"><b>Contact</b><span>Email and links</span></a>
         </div>
-        <div class="demo-body" id="body2">
-          <div class="demo-player">
-            <div class="video-placeholder" id="vp2">
-              <iframe loading="lazy"
-                width="100%"
-                height="315"
-                src="https://www.youtube.com/embed/ZF6kEoN3sDY"
-                title="TRACER demo"
-                frameborder="0"
-                allowfullscreen>
-              </iframe>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="demo-item" id="demo3">
-        <div class="demo-header" onclick="toggleDemo('demo3')">
-          <span class="demo-num">03</span>
-          <div class="demo-meta">
-            <div class="demo-title">Syringe dosage detection — YOLO v8 in real time</div>
-            <div class="demo-sub">Industrial plant · ONNX Runtime · 60 fps inference · GMP</div>
-            <div class="demo-badges">
-              <span class="demo-badge">YOLO v8</span>
-              <span class="demo-badge">U-Net</span>
-              <span class="demo-badge">ONNX</span>
-              <span class="demo-badge">Streamlit</span>
-            </div>
-          </div>
-          <button class="demo-toggle" id="btn3">Watch demo <span class="arrow">▼</span></button>
-        </div>
-        <div class="demo-body" id="body3">
-          <div class="demo-player">
-            <div class="video-placeholder vid-bg1" id="vp3"></div>
-          </div>
-          <input type="hidden" id="vname3" value="syringe_detection_demo.mp4">
-        </div>
-      </div>
-
-      <div class="demo-item" id="demo4">
-        <div class="demo-header" onclick="toggleDemo('demo4')">
-          <span class="demo-num">04</span>
-          <div class="demo-meta">
-            <div class="demo-title">LegalSearch — offline semantic search desktop app</div>
-            <div class="demo-sub">Local RAG · Ollama · PySide6/Qt · zero cloud dependency</div>
-            <div class="demo-badges">
-              <span class="demo-badge">LangChain</span>
-              <span class="demo-badge">ChromaDB</span>
-              <span class="demo-badge">PySide6</span>
-              <span class="demo-badge">Ollama</span>
-            </div>
-          </div>
-          <button class="demo-toggle" id="btn4">Watch demo <span class="arrow">▼</span></button>
-        </div>
-        <div class="demo-body" id="body4">
-          <div class="demo-player">
-            <div class="video-placeholder" id="vp4">
-              <iframe loading="lazy"
-                width="100%"
-                height="315"
-                src="https://www.youtube.com/embed/xMBShOwR4QI"
-                title="LegalSearch Offline demo"
-                frameborder="0"
-                allowfullscreen>
-              </iframe>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="demo-item" id="demo5">
-        <div class="demo-header" onclick="toggleDemo('demo5')">
-          <span class="demo-num">05</span>
-          <div class="demo-meta">
-            <div class="demo-title">MSDS Generator — SDS to Word via local LLM</div>
-            <div class="demo-sub">Mistral 7B · python-docx · GxP pharma</div>
-            <div class="demo-badges">
-              <span class="demo-badge">Mistral 7B</span>
-              <span class="demo-badge">Ollama</span>
-              <span class="demo-badge">python-docx</span>
-              <span class="demo-badge">Jama</span>
-            </div>
-          </div>
-          <button class="demo-toggle" id="btn5">Watch demo <span class="arrow">▼</span></button>
-        </div>
-        <div class="demo-body" id="body5">
-          <div class="demo-player">
-            <div class="video-placeholder vid-bg4" id="vp5"></div>
-          </div>
-          <input type="hidden" id="vname5" value="MSDSGENERATO.mp4">
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-  <!-- SKILLS -->
-  <div class="section" id="skills">
-    <div class="section-header"><h2>Skills</h2></div>
-
-    <div style="background:var(--bg2);border:1px solid rgba(200,245,66,0.2);border-left:3px solid var(--accent);border-radius:var(--radius);padding:1.2rem 1.5rem;margin-bottom:12px;">
-      <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent);margin-bottom:14px;">★ Cognex Ecosystem — core expertise</div>
-      <div class="skill-chips"><span class="skill-chip core">In-Sight Explorer</span><span class="skill-chip core">VisionPro</span><span class="skill-chip core">ViDi (Deep Learning)</span><span class="skill-chip core">3D Vision</span><span class="skill-chip core">In-Sight Vision Suite</span><span class="skill-chip core">Spreadsheet Interface</span></div>
-    </div>
-
-    <div class="skills-grid">
-      <div class="skill-group">
-        <div class="skill-group-title">GenAI &amp; multi-agent systems</div>
-        <div class="skill-chips"><span class="skill-chip">LangGraph</span><span class="skill-chip">Multi-agent orchestration</span><span class="skill-chip">RAG</span><span class="skill-chip">LangChain</span><span class="skill-chip">Ollama · Mistral · phi3</span><span class="skill-chip">ChromaDB · embeddings</span><span class="skill-chip">FastAPI</span><span class="skill-chip">Streamlit · PySide6</span></div>
-      </div>
-      <div class="skill-group">
-        <div class="skill-group-title">Validation &amp; GxP</div>
-        <div class="skill-chips"><span class="skill-chip">GMP</span><span class="skill-chip">21 CFR Part 11</span><span class="skill-chip">OQ / PQ protocols</span><span class="skill-chip">Test &amp; validation</span><span class="skill-chip">Traceability</span><span class="skill-chip">Jama · Jira</span><span class="skill-chip">Technical mentoring</span></div>
-      </div>
-      <div class="skill-group">
-        <div class="skill-group-title">Computer Vision (custom)</div>
-        <div class="skill-chips"><span class="skill-chip">YOLO v8</span><span class="skill-chip">U-Net segmentation</span><span class="skill-chip">OCR</span><span class="skill-chip">ONNX Runtime</span><span class="skill-chip">OpenCV</span><span class="skill-chip">MediaPipe</span></div>
-      </div>
-      <div class="skill-group">
-        <div class="skill-group-title">Deep Learning &amp; models</div>
-        <div class="skill-chips"><span class="skill-chip">Keras</span><span class="skill-chip">PyTorch</span><span class="skill-chip">Custom CNN · ResNet</span><span class="skill-chip">Transformers</span><span class="skill-chip">Transfer learning</span><span class="skill-chip">LoRA · QLoRA</span><span class="skill-chip">HuggingFace</span></div>
       </div>
     </div>
   </div>
 
-  <!-- EDUCATION & CERTIFICATIONS -->
-  <div class="section" id="education">
-    <div class="section-header"><h2>Education</h2></div>
-    <div class="edu-grid">
-      <div class="edu-card edu-wide">
-        <div class="edu-degree">PhD in Data Science <span style="font-weight:400;color:var(--text3);">· in progress</span></div>
-        <div class="edu-school">Universidad Loyola Andalucía</div>
-        <div class="edu-note">Research: LLM-based automated generation of GxP verification documentation.</div>
-      </div>
-      <div class="edu-card">
-        <div class="edu-degree">Global MBA in AI &amp; Data Science</div>
-        <div class="edu-school">ENEB — Escuela de Negocios Europea de Barcelona</div>
-        <div class="edu-year">2023 — 2026</div>
-      </div>
-      <div class="edu-card">
-        <div class="edu-degree">MSc in Artificial Intelligence</div>
-        <div class="edu-school">VIU — Universidad Internacional de Valencia</div>
-        <div class="edu-year">2021 — 2025 · Thesis: Eye Tracking in Online Education</div>
-      </div>
-      <div class="edu-card">
-        <div class="edu-degree">Telecommunications Electronics Engineering</div>
-        <div class="edu-school">Universitat Autònoma de Barcelona</div>
-        <div class="edu-year">2014 — 2019</div>
-      </div>
-      <div class="edu-card">
-        <div class="edu-degree">Bachelor of Applied Science</div>
-        <div class="edu-school">La Salle Gràcia</div>
-        <div class="edu-year">Foundation</div>
-      </div>
-    </div>
-
-    <!-- CERTIFICATIONS -->
-    <div class="section-header" style="margin-top:2.5rem;"><h2>Certifications</h2></div>
-    <div class="certs-list">
-      <div class="cert-item">
-        <span class="cert-platform">Udemy</span>
-        <span class="cert-name">Deep Learning A–Z: Neural Networks in Python from scratch</span>
-        <span class="cert-year">Nov 2024 · 32h</span>
-      </div>
-      <div class="cert-item">
-        <span class="cert-platform">Udemy</span>
-        <span class="cert-name">Machine Learning A–Z: R &amp; Python for Data Science</span>
-        <span class="cert-year">Aug 2024 · 51.5h</span>
-      </div>
-      <div class="cert-item">
-        <span class="cert-platform">Udemy</span>
-        <span class="cert-name">Digital Image Processing with Python: from 0 to Master (OpenCV)</span>
-        <span class="cert-year">May 2024 · 18h</span>
-      </div>
-      <div class="cert-item">
-        <span class="cert-platform">Udemy</span>
-        <span class="cert-name">Scrum Master + Lead Agile &amp; Scrum Teams</span>
-        <span class="cert-year">May 2020 · 3h</span>
-      </div>
+  <div class="wrap">
+    <div class="stats">
+      <div class="stat"><span class="n">7+</span><span class="l">years in Computer Vision</span></div>
+      <div class="stat"><span class="n">30+</span><span class="l">high-impact CV &amp; AI projects across career</span></div>
+      <div class="stat"><span class="n">0.09%</span><span class="l">label-inspection reject rate, down from 0.78%</span></div>
+      <div class="stat"><span class="n">PhD</span><span class="l">candidate, plus MSc and MBA in AI &amp; Data</span></div>
     </div>
   </div>
 
-  <div class="section" id="why-me">
-    <div class="section-header"><h2>Why Me</h2></div>
-    <div class="why-grid">
-      <div class="why-card">
-        <h3>Industrial depth, not only AI hype</h3>
-        <p><strong>I understand production reality.</strong> My profile is built around factory constraints, vision robustness, inspection reliability and deployment decisions that have to work outside a notebook.</p>
-      </div>
-      <div class="why-card">
-        <h3>Validation-aware engineering</h3>
-        <p><strong>I speak both technical and regulated language.</strong> That matters in pharma and other high-stakes sectors where evidence, traceability and documentation quality influence adoption. It is also why my current research focuses on making LLM pipelines auditable.</p>
-      </div>
-      <div class="why-card">
-        <h3>Ready for principal-track scope</h3>
-        <p><strong>I can contribute as a senior individual contributor and shape direction.</strong> Strong fit for technical referent, specialist lead or principal-style AI/CV roles.</p>
+  <section id="whatido">
+    <div class="wrap">
+      <div class="sh"><h2>What I do</h2><a class="back" href="#go">Back to quick links</a></div>
+      <div class="grid3">
+        <div class="card"><h3>Computer Vision</h3><p>End-to-end CV pipelines for industrial production lines: detection, segmentation, OCR and quality control across pharma, packaging and manufacturing.</p><div class="tags"><span>YOLO</span><span>U-Net</span><span>OpenCV</span><span>ONNX</span></div></div>
+        <div class="card"><h3>Cognex Ecosystem</h3><p>Expert across the full Cognex stack (In-Sight Explorer, VisionPro, ViDi deep learning, 3D vision and Vision Suite), deployed in regulated pharma environments.</p><div class="tags"><span>In-Sight</span><span>VisionPro</span><span>ViDi</span><span>3D</span></div></div>
+        <div class="card"><h3>Deep Learning from scratch</h3><p>Custom neural network architectures built from the ground up. Designed a ResNet-style CNN for gaze estimation reaching 97% accuracy.</p><div class="tags"><span>Keras</span><span>PyTorch</span><span>ResNet</span><span>HuggingFace</span></div></div>
+        <div class="card"><h3>Generative AI &amp; Local LLMs</h3><p>Fully offline generative AI solutions: RAG pipelines, document assistants and intelligent agents using Ollama, Mistral and phi3. No cloud, no data exposure.</p><div class="tags"><span>Ollama</span><span>RAG</span><span>LangChain</span><span>ChromaDB</span></div></div>
+        <div class="card"><h3>GxP Doc Automation</h3><p>Automating regulated documentation (SRS, DS, SDS, traceability matrices) with local AI. GxP compliance knowledge combined with generative AI engineering.</p><div class="tags"><span>TRACER</span><span>GxP</span><span>Mistral</span><span>python-docx</span></div></div>
+        <div class="card"><h3>GxP Validation &amp; Test Eng.</h3><p>Pharmaceutical-grade test planning and system validation, from requirements gathering through OQ/PQ execution, using Jama and Jira in GMP-regulated environments.</p><div class="tags"><span>GMP</span><span>OQ/PQ</span><span>Jama</span><span>Jira</span></div></div>
       </div>
     </div>
-  </div>
+  </section>
 
-  <!-- EXPERIENCE -->
-  <div class="section" id="experience">
-    <div class="section-header"><h2>Experience</h2></div>
-    <div class="timeline">
-
-      <div class="tl-item">
-        <div class="tl-date">Sep 2025 — now</div>
-        <div class="tl-line"><div class="tl-dot"></div></div>
-        <div class="tl-body">
-          <div class="where">ALTEN Spain · Grifols</div>
-          <h4>Senior Computer Vision Engineer · Technical Referent</h4>
-          <p>Acting as technical referent for industrial CV initiatives in a GMP pharmaceutical environment. Owning inspection strategy, validation-aware delivery, stakeholder discussions and solution evolution from concept to production-facing execution. Leading LLM-based multi-agent documentation pipelines (LangGraph, RAG).</p><div class="tl-impact">Impact · Technical ownership, mentoring and AI/CV positioning inside client delivery</div>
-          <div class="tl-tags"><span class="tl-tag">Cognex</span><span class="tl-tag">GMP</span><span class="tl-tag">Jama</span><span class="tl-tag">Jira</span><span class="tl-tag">Technical Referent</span><span class="tl-tag">Generative AI</span><span class="tl-tag">LangGraph</span></div>
+  <section id="case">
+    <div class="wrap">
+      <div class="sh"><h2>Flagship case study</h2><a class="back" href="#go">Back to quick links</a></div>
+      <div class="case">
+        <h3>Industrial label inspection optimization for regulated production</h3>
+        <p class="lead">Improved an industrial visual inspection workflow by redesigning the inspection strategy around non-critical masking and retraining. The goal was not only better model accuracy, but a lower reject rate under real production constraints and a validation-friendly deployment approach.</p>
+        <div class="metrics">
+          <div class="metric"><b>0.78% → 0.09%</b><span>Reject rate reduction after masking strategy and retraining in production-oriented evaluation.</span></div>
+          <div class="metric"><b>8.6× lower</b><span>Relative reject-rate improvement while preserving focus on true defects.</span></div>
+          <div class="metric"><b>Validated mindset</b><span>Approach designed for regulated environments where traceability and deployment discipline matter.</span></div>
         </div>
-      </div>
-
-      <div class="tl-item">
-        <div class="tl-date">May 2025 — Sep 2025</div>
-        <div class="tl-line"><div class="tl-dot"></div></div>
-        <div class="tl-body">
-          <div class="where">ALTEN Spain · Grifols</div>
-          <h4>Senior CV Test &amp; Validation Engineer</h4>
-          <p>Designed and executed test strategies for machine vision systems under GxP constraints, combining Cognex development with validation discipline for pharmaceutical quality control.</p><div class="tl-impact">Impact · Bridged testing, validation and practical CV engineering</div>
-          <div class="tl-tags"><span class="tl-tag">Cognex</span><span class="tl-tag">VisionPro</span><span class="tl-tag">GxP</span><span class="tl-tag">OQ/PQ</span></div>
+        <div class="cells">
+          <div class="cell"><h4>Problem</h4><p>The initial inspection setup generated unnecessary rejects because non-critical zones were influencing the decision boundary in a real manufacturing scenario.</p></div>
+          <div class="cell"><h4>Solution</h4><p>Applied masking on non-critical regions, retrained the model and re-evaluated the system with production-oriented evidence, including ROC and confusion-matrix based reasoning.</p></div>
+          <div class="cell"><h4>Why it matters</h4><p>Not just building a model, but adapting it to industrial reality, reducing operational friction and making it deployable.</p></div>
         </div>
-      </div>
-
-      <div class="tl-item">
-        <div class="tl-date">Jan 2025 — Apr 2025</div>
-        <div class="tl-line"><div class="tl-dot dim"></div></div>
-        <div class="tl-body">
-          <div class="where dim">BERICAP</div>
-          <h4>Computer Vision Specialist Technician</h4>
-          <p>Development of AI vision applications for quality control of industrial caps using IMDvisor technology. High-speed production line inspection and maintenance.</p>
-          <div class="tl-tags"><span class="tl-tag">IMDvisor</span><span class="tl-tag">High-speed CV</span></div>
-        </div>
-      </div>
-
-      <div class="tl-item">
-        <div class="tl-date">Feb 2022 — Dec 2024</div>
-        <div class="tl-line"><div class="tl-dot dim"></div></div>
-        <div class="tl-body">
-          <div class="where dim">ALTEN Spain · Grifols</div>
-          <h4>Artificial Vision Test Engineer — QA Validation</h4>
-          <p>Prepared manual and automated validation plans in Jama/Jira while developing Cognex applications for pharmaceutical quality control. Built the documentation and execution discipline that later supported broader technical ownership.</p><div class="tl-impact">Impact · Strong foundation in regulated delivery and project coordination</div>
-          <div class="tl-tags"><span class="tl-tag">Cognex</span><span class="tl-tag">In-Sight Explorer</span><span class="tl-tag">QA</span></div>
-        </div>
-      </div>
-
-      <div class="tl-item">
-        <div class="tl-date">Feb 2021 — Feb 2022</div>
-        <div class="tl-line"><div class="tl-dot dim"></div></div>
-        <div class="tl-body">
-          <div class="where dim">BCNVision</div>
-          <h4>Vision Application Engineer</h4>
-          <p>Development of Cognex vision applications for quality control across multiple industries. Combined delivery with pre-sales support, helping translate technical capability into customer-facing value and solution credibility.</p><div class="tl-impact">Impact · Engineering plus consultative pre-sales value</div>
-          <div class="tl-tags"><span class="tl-tag">Cognex</span><span class="tl-tag">3D Vision</span><span class="tl-tag">Pre-sales</span></div>
-        </div>
-      </div>
-
-      <div class="tl-item">
-        <div class="tl-date">Sep 2019 — Feb 2021</div>
-        <div class="tl-line"><div class="tl-dot dim"></div></div>
-        <div class="tl-body">
-          <div class="where dim">SEA Vision</div>
-          <h4>Field Engineer — Artificial Vision</h4>
-          <p>Commissioning of CV systems for pharmaceutical quality control in Italy, Germany and Spain. High-accountability client-facing role that strengthened deployment discipline, troubleshooting and execution under real factory constraints.</p><div class="tl-impact">Impact · International commissioning in demanding regulated settings</div>
-          <div class="tl-tags"><span class="tl-tag">Commissioning</span><span class="tl-tag">Pharma</span><span class="tl-tag">Field work</span></div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-
-
-  <!-- CONTACT -->
-  <div class="section" id="contact">
-    <div class="section-header"><h2>Contact</h2></div>
-    <div class="contact-box">
-      <div class="contact-text">
-        <h3>Contact</h3>
-        <p>Best fit for senior computer vision, regulated GenAI / multi-agent systems and technical leadership roles where industrial depth, delivery credibility and technical ownership are all required.</p>
-      </div>
-      <div class="contact-links">
-        <a href="https://www.linkedin.com/in/juan-olivan-9a3210176/" class="contact-link" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="https://github.com/Jhon2704" class="contact-link" target="_blank">GitHub</a>
-        <a href="mailto:joanolivan27@gmail.com" class="contact-link">Email</a>
       </div>
     </div>
+  </section>
+
+  <section id="projects">
+    <div class="wrap">
+      <div class="sh"><h2>Projects and demos</h2><a class="back" href="#go">Back to quick links</a></div>
+      <div class="grid3">
+        <div class="card feat">
+          <span class="badge">latest build</span>
+          <h3>TRACER</h3>
+          <div class="impact"><b>Fully local workflow</b> · regulatory documentation automation for sensitive environments</div>
+          <p>Traceability &amp; Compliance Engine for Regulated Software. Local AI system that structures GxP documentation outputs from URS inputs, helping reduce repetitive manual drafting while keeping data on-premises.</p>
+          <div class="foot"><div class="tags"><span>Python</span><span>Streamlit</span><span>Ollama</span><span>ChromaDB</span><span>Mistral 7B</span><span>GxP</span></div><div><a class="btn small fill" href="https://youtu.be/ZF6kEoN3sDY" data-video="ZF6kEoN3sDY" data-title="TRACER demo" target="_blank" rel="noopener">Watch demo</a></div></div>
+        </div>
+        <div class="card feat">
+          <span class="badge">MSc thesis</span>
+          <h3>Eye Tracking in Online Education</h3>
+          <div class="impact"><b>97% accuracy</b> · custom CNN built from scratch for real-time gaze estimation</div>
+          <p>Real-time gaze direction estimation using only a standard webcam. Built a custom CNN with ResNet-style residual blocks, combined with MediaPipe facial landmarks and EAR blink detection, trained on real and GAN-generated synthetic data. Privacy-first, no biometric storage, GDPR-compliant.</p>
+          <div class="foot"><div class="tags"><span>Custom CNN</span><span>ResNet blocks</span><span>MediaPipe</span><span>Keras</span><span>OpenCV</span><span>GAN data</span></div><div style="display:flex;gap:8px;flex-wrap:wrap"><a class="btn small fill" href="https://youtu.be/2eXHXOJ3FP0" data-video="2eXHXOJ3FP0" data-title="Eye tracking demo" target="_blank" rel="noopener">Watch demo</a><a class="btn small" href="https://github.com/Jhon2704/EYE_TRACKING-Deep-learning-Computer-Vision" target="_blank" rel="noopener">Code</a></div></div>
+        </div>
+        <div class="card">
+          <h3>Syringe Dosage Analysis</h3>
+          <div class="impact"><b>2 approaches benchmarked</b> · industrial CV comparison under deployment constraints</div>
+          <p>Real-time dosage analysis of pharmaceutical syringes on an industrial line. Implemented and benchmarked Cognex ViDi against a custom YOLO v8 + U-Net + OCR pipeline, comparing accuracy, speed and deployment flexibility. Includes an on-device AI assistant for report generation and technical Q&amp;A, fully offline and GMP-aligned.</p>
+          <div class="foot"><div class="tags"><span>Cognex ViDi</span><span>YOLO v8</span><span>U-Net</span><span>ONNX</span><span>phi3:mini</span><span>Ollama</span></div><span class="note">Demo available on request</span></div>
+        </div>
+        <div class="card">
+          <h3>LegalSearch Offline</h3>
+          <div class="impact"><b>Zero cloud dependency</b> · semantic search with private local deployment</div>
+          <p>Local RAG desktop app for small law firms. Semantic search across legal documents with zero data leaving the machine, packaged with a Qt desktop frontend and PyInstaller distribution for practical adoption.</p>
+          <div class="foot"><div class="tags"><span>Ollama</span><span>ChromaDB</span><span>PySide6</span><span>LangChain</span><span>PyInstaller</span></div><div><a class="btn small fill" href="https://youtu.be/xMBShOwR4QI" data-video="xMBShOwR4QI" data-title="LegalSearch Offline demo" target="_blank" rel="noopener">Watch demo</a></div></div>
+        </div>
+        <div class="card">
+          <h3>MSDS Generator</h3>
+          <div class="impact"><b>Local document generation</b> · sensitive pharma documentation without cloud APIs</div>
+          <p>Converts SDS documents from Jama Connect into Word-format MSDS outputs using local Mistral 7B, reducing reliance on cloud tooling for sensitive pharmaceutical documentation workflows.</p>
+          <div class="foot"><div class="tags"><span>Mistral 7B</span><span>Ollama</span><span>python-docx</span><span>Jama</span><span>GxP</span></div><span class="note">Demo available on request</span></div>
+        </div>
+        <div class="card">
+          <h3>AI Document Assistant</h3>
+          <div class="impact"><b>On-prem document Q&amp;A</b> · regulated knowledge access without data exposure</div>
+          <p>Local RAG assistant for regulated-industry document management. Semantic search and Q&amp;A over technical specifications, validation protocols and requirement documents with all data kept on-premises.</p>
+          <div class="foot"><div class="tags"><span>FastAPI</span><span>RAG</span><span>ChromaDB</span><span>Ollama</span><span>Mistral 7B</span><span>GxP</span></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="wrap">
+      <div class="sh"><h2>Experience</h2><a class="back" href="#go">Back to quick links</a></div>
+      <div class="now">
+        <h3>Current role: Technical Referent, Computer Vision &amp; AI · ALTEN Spain</h3>
+        <p>Acting as the go-to technical reference for Computer Vision initiatives in <strong>Manufacturing Engineering</strong> within a GxP pharmaceutical environment. Responsible for validated CV delivery, test strategy in Jama &amp; Jira, and cross-functional collaboration with automation, quality and compliance teams. End-to-end project management of vision systems, from requirements gathering through system validation and regulatory documentation. Leading the onboarding and training of junior engineers. Combining <strong>Cognex expertise</strong> (In-Sight Explorer, VisionPro), deep learning and <strong>generative AI tools</strong> to solve production and documentation challenges under real industrial constraints.</p>
+        <div class="tags"><span>Technical Referent</span><span>Manufacturing Engineering</span><span>Computer Vision</span><span>Gen AI</span><span>AI Engineer</span><span>GMP</span><span>Jama / Jira</span></div>
+      </div>
+      <div class="tl">
+        <div class="tl-item"><div class="when">Sep 2025 to now</div><div><h3>Senior Computer Vision Engineer · Technical Referent</h3><div class="where">ALTEN Spain · Grifols</div><p>Acting as technical referent for industrial CV initiatives in a GMP pharmaceutical environment. Owning inspection strategy, validation-aware delivery, stakeholder discussions and solution evolution from concept to production. Leading onboarding and training of junior engineers.</p><ul><li>Development and validation of computer vision applications for pharmaceutical product quality control with <strong>Cognex</strong> (In-Sight Explorer, VisionPro).</li><li>End-to-end project management of vision systems: requirements gathering, system validation and regulatory documentation.</li><li>Technical referent for the Computer Vision team: leading the onboarding and training of junior engineers.</li><li>Building generative AI tools (multi-agent, RAG) to automate GxP documentation and verification work.</li></ul><div class="tags"><span>Cognex</span><span>GMP</span><span>Jama</span><span>Jira</span><span>Generative AI</span></div></div></div>
+        <div class="tl-item"><div class="when">May 2025 to Sep 2025</div><div><h3>Senior CV Test &amp; Validation Engineer</h3><div class="where">ALTEN Spain · Grifols</div><p>Designed and executed test strategies for machine vision systems under GxP constraints, combining Cognex development with validation discipline for pharmaceutical quality control.</p><ul><li>Preparation of manual and automated test plans in <strong>Jama</strong> and <strong>Jira</strong>.</li><li>Development of Cognex vision applications (In-Sight Explorer and VisionPro) for pharmaceutical quality control.</li><li>Computer vision project management under GxP constraints.</li></ul><div class="tags"><span>Cognex</span><span>VisionPro</span><span>GxP</span><span>OQ/PQ</span></div></div></div>
+        <div class="tl-item"><div class="when">Jan 2025 to Apr 2025</div><div><h3>Computer Vision Specialist Technician</h3><div class="where">BERICAP</div><p>AI vision for high-speed production lines, where inspection has to keep up with the line.</p><ul><li>Development of artificial vision applications for quality control of caps for all types of industry, using IMDvisor.</li><li>Solutions designed to work at high speed in production, meeting high order volumes.</li><li>Maintenance of vision equipment in production and computer vision project management.</li></ul><div class="tags"><span>IMDvisor</span><span>High-speed CV</span></div></div></div>
+        <div class="tl-item"><div class="when">Feb 2022 to Dec 2024</div><div><h3>Artificial Vision Test Engineer · QA Validation</h3><div class="where">ALTEN Spain · Grifols</div><p>Prepared manual and automated validation plans in Jama/Jira while developing Cognex applications for pharmaceutical quality control. Built the documentation and execution discipline that later supported broader technical ownership.</p><ul><li>Preparation of manual and automated test plans in Jama and Jira.</li><li>Development of artificial vision applications with Cognex for pharmaceutical quality control; specialist in In-Sight Explorer and VisionPro.</li><li>Computer vision project management.</li></ul><div class="tags"><span>Cognex</span><span>In-Sight Explorer</span><span>QA</span></div></div></div>
+        <div class="tl-item"><div class="when">Feb 2021 to Feb 2022</div><div><h3>Vision Application Engineer</h3><div class="where">BCNVision</div><p>Development of Cognex vision applications for quality control across multiple industries. Combined delivery with pre-sales support, helping translate technical capability into customer-facing value and solution credibility.</p><ul><li>Development of Cognex vision applications (In-Sight Explorer and VisionPro) for quality control in pharmaceutical products and all types of markets.</li><li>Computer vision project management and pre-sales technical support for vision applications.</li><li>3D vision and deep learning.</li></ul><div class="tags"><span>Cognex</span><span>3D Vision</span><span>Pre-sales</span></div></div></div>
+        <div class="tl-item"><div class="when">Sep 2019 to Feb 2021</div><div><h3>Field Engineer · Artificial Vision</h3><div class="where">RC Electrónica</div><p>High-accountability client-facing role that strengthened deployment discipline, troubleshooting and execution under real factory constraints.</p><ul><li>Development of artificial vision applications for the quality control of pharmaceutical products.</li><li>Commissioning of vision systems in Italy, Germany and Spain.</li><li>Day-to-day work with demanding clients on site.</li></ul><div class="tags"><span>Commissioning</span><span>Pharma</span><span>Field work</span></div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="wrap">
+      <div class="sh"><h2>Skills</h2><a class="back" href="#go">Back to quick links</a></div>
+      <div class="skillgrid">
+        <div class="skill wide"><h3>Cognex ecosystem · core expertise</h3><div class="tags"><span>In-Sight Explorer</span><span>VisionPro</span><span>Cognex ViDi (Deep Learning)</span><span>3D Vision</span><span>In-Sight Vision Suite</span><span>Spreadsheet Interface</span></div></div>
+        <div class="skill"><h3>Computer Vision (custom)</h3><div class="tags"><span>YOLO / detection</span><span>Segmentation (U-Net)</span><span>OCR / image processing</span><span>ONNX Runtime</span><span>MediaPipe / OpenCV</span></div></div>
+        <div class="skill"><h3>Deep Learning &amp; Models</h3><div class="tags"><span>Keras / PyTorch</span><span>Custom CNN / ResNet</span><span>Transformers (HF)</span><span>Transfer learning</span><span>Fine-tuning (LoRA/QLoRA)</span></div></div>
+        <div class="skill"><h3>Generative AI &amp; Local LLMs</h3><div class="tags"><span>Python / FastAPI</span><span>Ollama / Mistral / phi3</span><span>LangChain / RAG</span><span>LangGraph</span><span>Agent orchestration</span><span>Orchestrator + subagents</span><span>MCP</span><span>Agent memory</span><span>ChromaDB / embeddings</span><span>Quantization (GGUF)</span><span>vLLM</span><span>Streamlit / PySide6</span><span>Claude Code</span><span>GitHub Copilot</span></div></div>
+        <div class="skill"><h3>Validation &amp; QA (GxP)</h3><div class="tags"><span>Test &amp; Validation</span><span>GMP environments</span><span>21 CFR Part 11</span><span>OQ / PQ protocols</span><span>Jama / Jira</span><span>Technical mentoring</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="education">
+    <div class="wrap">
+      <div class="sh"><h2>Education</h2><a class="back" href="#go">Back to quick links</a></div>
+      <div class="edugrid">
+        <div class="edu wide"><b>PhD in Data Science (in progress)</b><div class="s">Universidad Loyola Andalucía</div></div>
+        <div class="edu"><b>Global MBA in AI &amp; Data Science</b><div class="s">ENEB — Escuela de Negocios Europea de Barcelona</div><div class="y">2023 — 2026</div></div>
+        <div class="edu"><b>MSc in Artificial Intelligence</b><div class="s">VIU — Universidad Internacional de Valencia</div><div class="y">2021 — 2025 · Thesis: Eye Tracking in Online Education</div></div>
+        <div class="edu"><b>Telecommunications Electronics Engineering</b><div class="s">Universitat Autònoma de Barcelona</div><div class="y">2014 — 2019</div></div>
+        <div class="edu"><b>Bachelor of Applied Science</b><div class="s">La Salle Gràcia</div><div class="y">Foundation</div></div>
+      </div>
+      <div class="certs">
+        <h3>Certifications</h3>
+        <div class="cert"><span>Deep Learning A–Z: Neural Networks in Python from scratch</span><span>Udemy · Nov 2024 · 32h</span></div>
+        <div class="cert"><span>Machine Learning A–Z: R &amp; Python for Data Science</span><span>Udemy · Aug 2024 · 51.5h</span></div>
+        <div class="cert"><span>Digital Image Processing with Python: from 0 to Master (OpenCV)</span><span>Udemy · May 2024 · 18h</span></div>
+        <div class="cert"><span>Scrum Master + Lead Agile &amp; Scrum Teams</span><span>Udemy · May 2020 · 3h</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="why">
+    <div class="wrap">
+      <div class="sh"><h2>Why work with me</h2><a class="back" href="#go">Back to quick links</a></div>
+      <div class="grid3 why">
+        <div class="card"><h3>Industrial depth, not only AI hype</h3><p><strong>I understand production reality.</strong> My profile is built around factory constraints, vision robustness, inspection reliability and deployment decisions that have to work outside a notebook.</p></div>
+        <div class="card"><h3>Validation-aware engineering</h3><p><strong>I speak both technical and regulated language.</strong> That matters in pharma and other high-stakes sectors where evidence, traceability and documentation quality influence adoption.</p></div>
+        <div class="card"><h3>Ready for principal-track scope</h3><p><strong>I can contribute as a senior individual contributor and shape direction.</strong> Strong fit for technical referent, specialist lead or principal-style AI/CV roles.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <div class="contact-box">
+        <div>
+          <h2>Contact</h2>
+          <p>Best fit for senior computer vision, AI systems, technical referent and specialist leadership roles where industrial depth, delivery credibility and technical ownership are all required.</p>
+        </div>
+        <div class="links">
+          <a href="https://www.linkedin.com/in/juan-oli%C3%A1n-9a3210176/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://github.com/Jhon2704" target="_blank" rel="noopener">GitHub</a>
+          <a href="mailto:joanolivan28@gmail.com">Email <span>joanolivan28@gmail.com</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <div class="page-foot"><span>© 2026 · Juan Oliván · Computer Vision &amp; AI Engineer</span><span>Barcelona, Catalonia · Spain</span></div>
   </div>
+</main>
 
-  <!-- FOOTER -->
-  <footer>
-    <p>© 2026 · Juan Oliván · Computer Vision & AI Engineer</p>
-    <p>Barcelona, Catalonia · Spain</p>
-  </footer>
-
-</div>
+<dialog class="video" id="vdlg" aria-labelledby="vtitle">
+  <div class="v-head"><b id="vtitle">Demo</b><button class="v-close" type="button" id="vclose">Close</button></div>
+  <div class="v-frame" id="vframe"></div>
+  <div class="v-foot">If the video does not load, <a id="vlink" href="#" target="_blank" rel="noopener">open it on YouTube</a>.</div>
+</dialog>
 
 <script>
-  // ── DEMO ACCORDION (supports 5 demos) ──
-  const DEMO_COUNT = 5;
-  function toggleDemo(id) {
-    const num    = id.replace('demo', '');
-    const body   = document.getElementById('body' + num);
-    const btn    = document.getElementById('btn'  + num);
-    const item   = document.getElementById(id);
-    const isOpen = body.classList.contains('open');
-
-    for (let n = 1; n <= DEMO_COUNT; n++) {
-      const b = document.getElementById('body' + n);
-      const t = document.getElementById('btn'  + n);
-      const d = document.getElementById('demo' + n);
-      if (b) b.classList.remove('open');
-      if (t) { t.classList.remove('open'); t.innerHTML = 'Watch demo <span class="arrow">▼</span>'; }
-      if (d) d.classList.remove('active');
-    }
-
-    if (!isOpen) {
-      body.classList.add('open');
-      btn.classList.add('open');
-      btn.innerHTML = 'Close <span class="arrow">▼</span>';
-      item.classList.add('active');
-      setTimeout(() => {
-        item.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-        // ── Load video for this demo if filename is set and not already loaded ──
-        const input = document.getElementById('vname' + num);
-        const placeholder = document.getElementById('vp' + num);
-        if (input && placeholder && input.value.trim() && !placeholder.querySelector('video, iframe')) {
-          loadVideoByName('vp' + num, 'vname' + num);
-        }
-      }, 50);
-    }
+(function () {
+  var dlg = document.getElementById('vdlg');
+  if (!dlg || typeof dlg.showModal !== 'function') return;
+  var frame = document.getElementById('vframe');
+  var title = document.getElementById('vtitle');
+  var link = document.getElementById('vlink');
+  function open(id, name) {
+    title.textContent = name || 'Demo';
+    link.href = 'https://youtu.be/' + id;
+    frame.innerHTML = '<iframe src="https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&rel=0" title="' + (name || 'Demo') + '" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>';
+    dlg.showModal();
   }
-
-  // ── VIDEO UPL
-  // ── LOAD VIDEO BY FILENAME ──
-  function loadVideoByName(placeholderId, inputId) {
-    const input = document.getElementById(inputId);
-    if (!input) return;
-    const name = input.value.trim();
-    if (!name) return;
-    const src = name.startsWith('http') || name.startsWith('/') ? name : 'videos/' + name;
-    const placeholder = document.getElementById(placeholderId);
-    if (!placeholder) return;
-    placeholder.innerHTML = '';
-    placeholder.style.background = '#000';
-    const vid = document.createElement('video');
-    vid.src = src;
-    vid.controls = true;
-    vid.setAttribute('controlsList', 'nodownload');
-    vid.setAttribute('disablePictureInPicture', '');
-    vid.oncontextmenu = (e) => e.preventDefault();
-    vid.style.cssText = 'width:100%;height:100%;border-radius:8px;display:block;';
-    vid.onerror = () => {
-      placeholder.style.background = '#111114';
-      placeholder.innerHTML = '<div style="text-align:center;padding:2rem;font-family:\'DM Mono\',monospace;"><p style="font-size:12px;color:#c8f542;margin-bottom:8px;">Demo available on request</p><p style="font-size:11px;color:#8b8a91;">Recorded on a live production line.<br>Get in touch to arrange a walkthrough.</p></div>';
-    };
-    placeholder.appendChild(vid);
-  }
-
-  // Videos load automatically when each accordion opens
-  // Block right-click on any video element to prevent easy download
-  document.addEventListener('contextmenu', (e) => {
-    if (e.target.tagName === 'VIDEO') e.preventDefault();
+  Array.prototype.forEach.call(document.querySelectorAll('[data-video]'), function (a) {
+    a.addEventListener('click', function (e) { e.preventDefault(); open(a.getAttribute('data-video'), a.getAttribute('data-title')); });
   });
-
+  document.getElementById('vclose').addEventListener('click', function () { dlg.close(); });
+  dlg.addEventListener('click', function (e) { if (e.target === dlg) dlg.close(); });
+  dlg.addEventListener('close', function () { frame.innerHTML = ''; });
+})();
 </script>
+
 </body>
 </html>
